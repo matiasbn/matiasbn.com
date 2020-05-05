@@ -3,25 +3,17 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const resumeLink = 'https://drive.google.com/file/d/1lDM4vqUX0f1XhINEpUZ7TzkFKGAjdhzB/view?usp=sharing';
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit
-          {' '}
-          <code>src/App.js</code>
-          {' '}
-          and save to reload.
+          This page is under construction :).
+          <br />
+          You can refer to my Resume by clicking
+          <a href={resumeLink}> here</a>
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React po loco siiii
-        </a>
       </header>
     </div>
   );
