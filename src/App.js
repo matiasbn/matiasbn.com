@@ -1,25 +1,14 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { Container } from '@material-ui/core';
+import Headline from './views/Headline';
 
 function App() {
-  const resumeLink = 'https://drive.google.com/file/d/1lDM4vqUX0f1XhINEpUZ7TzkFKGAjdhzB/view?usp=sharing';
   return (
     <div className="App">
-      <header className="App-header">
-        <h2 className="App-header-title">
-          Computers Engineer, Full Stack Developer and Blockchain Mentor.
-        </h2>
-        <h3 className="App-header-subtitle">
-          I design and create digital products, and i love what i do.
-        </h3>
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          You can see my Resume by clicking
-          {' '}
-          <a href={resumeLink}>here</a>
-        </p>
-      </header>
+      <Container fixed>
+        <Headline />
+      </Container>
     </div>
   );
 }
