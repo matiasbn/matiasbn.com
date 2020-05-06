@@ -13,6 +13,7 @@ function App() {
           <br />
           You can refer to my Resume by clicking
           <a href={resumeLink}> here</a>
+          Hola rosi princesa
         </p>
       </header>
     </div>
