@@ -7,13 +7,17 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <h2 className="App-header-title">
+          Computers Engineer, Full Stack Developer and Blockchain Mentor.
+        </h2>
+        <h3 className="App-header-subtitle">
+          I design and create digital products, and i love what i do.
+        </h3>
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          This page is under construction :).
-          <br />
-          You can refer to my Resume by clicking
-          <a href={resumeLink}> here</a>
-          Hola rosi princesa
+          You can see my Resume by clicking
+          {' '}
+          <a href={resumeLink}>here</a>
         </p>
       </header>
     </div>
