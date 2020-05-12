@@ -14,6 +14,6 @@ deploy:
   skip_cleanup: true
   github_token: $github_token
   local_dir: build
-  fqdn: www.matiasbn.com
+  fqdn: www.matiasbn.dev
   on:
     branch: master
