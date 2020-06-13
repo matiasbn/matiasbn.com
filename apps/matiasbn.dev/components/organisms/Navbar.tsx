@@ -30,6 +30,7 @@ const ButtonContainer = styled.div`
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
+  padding-right: 10px;
 `;
 
 export default function Navbar({}: Props) {
@@ -42,7 +43,12 @@ export default function Navbar({}: Props) {
         <NavbarMenu></NavbarMenu>
       </BarMenuContainer>
       <ButtonContainer>
-        <Button>Contact me!</Button>
+        <Button
+          href={'mailto:matias.barriosn@gmail.com?subject=Hello Matías!'}
+          type={'button'}
+        >
+          Contact me!
+        </Button>
       </ButtonContainer>
     </Wrapper>
   );

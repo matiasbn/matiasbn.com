@@ -37,7 +37,7 @@ export default class CustomDocument extends Document<{
             rel="stylesheet"
           ></link>
         </Head>
-        <body style={{ margin: 0 }}>
+        <body>
           <Main />
           <NextScript />
         </body>

@@ -6,18 +6,27 @@ type Props = {};
 
 const Wrapper = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   width: 500px;
 `;
 
-const options = ['Home', 'Experience', 'Projects', 'Tech stack'];
+//const options = ['Home', 'Experience', 'Projects', 'Tech stack'];
+const options = [
+  {
+    title: 'Resume',
+    href:
+      'https://drive.google.com/file/d/1szHiZKK7u-pqogYJb2VJDVU08lF_p--6/view?usp=sharing',
+  },
+];
 
 export default function NavbarMenu({}: Props) {
   return (
     <Wrapper>
       {options.map((option) => (
-        <NavbarText key={option}>{option}</NavbarText>
+        <NavbarText key={option.title} href={option.href}>
+          {option.title}
+        </NavbarText>
       ))}
     </Wrapper>
   );
