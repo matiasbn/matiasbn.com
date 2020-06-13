@@ -23,6 +23,14 @@ export default class CustomDocument extends Document<{
         <Head>
           <title>Welcome to matiasbn.dev!</title>
           {this.props.styleTags}
+          <link
+            href="https://fonts.googleapis.com/css2?family=MuseoModerno&display=swap"
+            rel="stylesheet"
+          ></link>
+          <link
+            href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap"
+            rel="stylesheet"
+          ></link>
         </Head>
         <body>
           <Main />

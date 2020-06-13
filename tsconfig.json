@@ -15,7 +15,11 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@atoms/*": ["apps/matiasbn.dev/components/atoms/*"],
+      "@molecules/*": ["apps/matiasbn.dev/components/molecules/*"],
+      "@organisms/*": ["apps/matiasbn.dev/components/organisms/*"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
