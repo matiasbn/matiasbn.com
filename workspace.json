@@ -1,0 +1,154 @@
+{
+  "version": 1,
+  "projects": {
+    "matiasbn.dev": {
+      "root": "apps/matiasbn.dev",
+      "sourceRoot": "apps/matiasbn.dev",
+      "projectType": "application",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "@nrwl/next:build",
+          "options": {
+            "root": "apps/matiasbn.dev",
+            "outputPath": "dist/apps/matiasbn.dev"
+          },
+          "configurations": {
+            "production": {}
+          }
+        },
+        "serve": {
+          "builder": "@nrwl/next:server",
+          "options": {
+            "buildTarget": "matiasbn.dev:build",
+            "dev": true
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "matiasbn.dev:build:production",
+              "dev": false
+            }
+          }
+        },
+        "export": {
+          "builder": "@nrwl/next:export",
+          "options": {
+            "buildTarget": "matiasbn.dev:build:production"
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:lint",
+          "options": {
+            "linter": "eslint",
+            "tsConfig": [
+              "apps/matiasbn.dev/tsconfig.json",
+              "apps/matiasbn.dev/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!apps/matiasbn.dev/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/matiasbn.dev/jest.config.js",
+            "tsConfig": "apps/matiasbn.dev/tsconfig.spec.json",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "matiasbn.dev-e2e": {
+      "root": "apps/matiasbn.dev-e2e",
+      "sourceRoot": "apps/matiasbn.dev-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/matiasbn.dev-e2e/cypress.json",
+            "tsConfig": "apps/matiasbn.dev-e2e/tsconfig.e2e.json",
+            "devServerTarget": "matiasbn.dev:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "matiasbn.dev:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:lint",
+          "options": {
+            "linter": "eslint",
+            "tsConfig": ["apps/matiasbn.dev-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/matiasbn.dev-e2e/**/*"]
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "defaultCollection": "@nrwl/next"
+  },
+  "schematics": {
+    "@nrwl/workspace": {
+      "library": {
+        "linter": "eslint"
+      }
+    },
+    "@nrwl/cypress": {
+      "cypress-project": {
+        "linter": "eslint"
+      }
+    },
+    "@nrwl/react": {
+      "application": {
+        "linter": "eslint",
+        "babel": true
+      },
+      "library": {
+        "linter": "eslint"
+      },
+      "storybook-configuration": {
+        "linter": "eslint"
+      }
+    },
+    "@nrwl/next": {
+      "application": {
+        "style": "styled-components",
+        "linter": "eslint"
+      }
+    },
+    "@nrwl/web": {
+      "application": {
+        "linter": "eslint"
+      }
+    },
+    "@nrwl/node": {
+      "application": {
+        "linter": "eslint"
+      },
+      "library": {
+        "linter": "eslint"
+      }
+    },
+    "@nrwl/nx-plugin": {
+      "plugin": {
+        "linter": "eslint"
+      }
+    },
+    "@nrwl/nest": {
+      "application": {
+        "linter": "eslint"
+      }
+    },
+    "@nrwl/express": {
+      "application": {
+        "linter": "eslint"
+      },
+      "library": {
+        "linter": "eslint"
+      }
+    }
+  },
+  "defaultProject": "matiasbn.dev"
+}

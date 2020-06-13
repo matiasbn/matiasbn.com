@@ -1,0 +1,40 @@
+{
+  "npmScope": "matiasbn.dev",
+  "implicitDependencies": {
+    "workspace.json": "*",
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    "tsconfig.json": "*",
+    "tslint.json": "*",
+    "nx.json": "*"
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/nx-cloud",
+      "options": {
+        "accessToken": "NDUyNjdkZTItNGJhNS00MGRkLWI3NTctMTc2ODdhZmQ5NzMzfHJlYWQtd3JpdGU=",
+        "cacheableOperations": [
+          "build",
+          "test",
+          "lint",
+          "e2e"
+        ],
+        "canTrackAnalytics": false,
+        "showUsageWarnings": true
+      }
+    }
+  },
+  "projects": {
+    "matiasbn.dev": {
+      "tags": []
+    },
+    "matiasbn.dev-e2e": {
+      "tags": [],
+      "implicitDependencies": [
+        "matiasbn.dev"
+      ]
+    }
+  }
+}
