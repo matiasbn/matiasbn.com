@@ -26,7 +26,10 @@ export default class CustomDocument extends Document<{
     return (
       <html>
         <Head>
-          <title>Welcome to matiasbn.dev!</title>
+          <meta
+            name="viewport"
+            content={`width=device-width, initial-scale=1`}
+          />
           {this.props.styleTags}
           <link
             href="https://fonts.googleapis.com/css2?family=MuseoModerno&display=swap"

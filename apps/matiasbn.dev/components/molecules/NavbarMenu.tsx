@@ -8,7 +8,6 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  width: 500px;
 `;
 
 //const options = ['Home', 'Experience', 'Projects', 'Tech stack'];

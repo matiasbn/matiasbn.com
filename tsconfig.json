@@ -18,7 +18,8 @@
     "paths": {
       "@atoms/*": ["apps/matiasbn.dev/components/atoms/*"],
       "@molecules/*": ["apps/matiasbn.dev/components/molecules/*"],
-      "@organisms/*": ["apps/matiasbn.dev/components/organisms/*"]
+      "@organisms/*": ["apps/matiasbn.dev/components/organisms/*"],
+      "@matiasbn.dev/utils": ["libs/utils/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

@@ -15,12 +15,7 @@
       "runner": "@nrwl/nx-cloud",
       "options": {
         "accessToken": "NDUyNjdkZTItNGJhNS00MGRkLWI3NTctMTc2ODdhZmQ5NzMzfHJlYWQtd3JpdGU=",
-        "cacheableOperations": [
-          "build",
-          "test",
-          "lint",
-          "e2e"
-        ],
+        "cacheableOperations": ["build", "test", "lint", "e2e"],
         "canTrackAnalytics": false,
         "showUsageWarnings": true
       }
@@ -32,9 +27,10 @@
     },
     "matiasbn.dev-e2e": {
       "tags": [],
-      "implicitDependencies": [
-        "matiasbn.dev"
-      ]
+      "implicitDependencies": ["matiasbn.dev"]
+    },
+    "utils": {
+      "tags": []
     }
   }
 }

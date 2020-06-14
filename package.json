@@ -29,10 +29,11 @@
   },
   "private": true,
   "dependencies": {
+    "@nrwl/node": "^9.4.0",
     "document-register-element": "1.13.1",
+    "next": "9.3.3",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "next": "9.3.3",
     "react-is": "16.13.1",
     "styled-components": "5.1.0"
   },

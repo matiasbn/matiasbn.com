@@ -3,48 +3,48 @@ import styled from 'styled-components';
 import BrandText from '@atoms/BrandText';
 import NavbarMenu from '@molecules/NavbarMenu';
 import Button from '@atoms/Button';
+import { breakpoints } from '@matiasbn.dev/utils';
 
 type Props = {};
 
 const Wrapper = styled.div`
   display: grid;
-  grid-template-columns: 40% 50% 10%;
-  height: 100px;
+  width: 100vw;
+  grid-template-columns: 40% 35% 25%;
+  justify-items: center;
+  align-items: center;
 `;
 
-const BandContainer = styled.div`
+const BrandContainer = styled.div`
   padding-left: 20px;
   display: flex;
   align-items: center;
+  font-size: 0.5rem;
 `;
 
 const BarMenuContainer = styled.div`
   display: flex;
-  justify-content: flex-end;
   align-items: center;
-  margin-right: 40px;
+  padding-right: 10px;
 `;
 
 const ButtonContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
-  padding-right: 10px;
+  font-size: 0.5rem;
+  height: 5vh;
 `;
 
 export default function Navbar({}: Props) {
   return (
     <Wrapper>
-      <BandContainer>
+      <BrandContainer>
         <BrandText>Matías Barrios</BrandText>
-      </BandContainer>
+      </BrandContainer>
       <BarMenuContainer>
         <NavbarMenu></NavbarMenu>
       </BarMenuContainer>
       <ButtonContainer>
         <Button
-          href={'mailto:matias.barriosn@gmail.com?subject=Hello Matías!'}
+          href={'mailto:matias.barriosn@gmail.com?subject="Hello Matías!"'}
           type={'button'}
         >
           Contact me!

@@ -1,39 +1,54 @@
 import React from 'react';
 import styled from 'styled-components';
-
+import { breakpoints } from '@matiasbn.dev/utils';
 type Props = {};
 
 const Wrapper = styled.div`
   background: black;
-  height: 600px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 3fr 7fr;
+  justify-content: center;
+  align-content: center;
+  height: 90vh;
 `;
 
-const Title = styled.div`
-  color: white;
+const ContainerTitle = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 50px;
-  padding: 30px;
+  margin: 0;
+  color: white;
+  font-size: 4vw;
+  text-align: center;
+  h1 {
+    margin: 0;
+  }
 `;
 
-const Icon = styled.div`
+const ContainerIcon = styled.div`
+  margin: 0;
   color: white;
+  text-align: center;
+  font-size: 25vw;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 200px;
+  h1 {
+    margin: 0;
+  }
 `;
 
 export default function Hero({}: Props) {
   return (
     <Wrapper>
-      <Title>
-        Computers Engineer, Fullstack JS Developer and Blockchain Mentor
-      </Title>
-      <Icon>{'</>'}</Icon>
+      <ContainerTitle>
+        <h1>
+          {'Computers Engineer, Fullstack JS Developer and Blockchain Mentor'}
+        </h1>
+      </ContainerTitle>
+      <ContainerIcon>
+        <h1>{'</>'}</h1>
+      </ContainerIcon>
     </Wrapper>
   );
 }
