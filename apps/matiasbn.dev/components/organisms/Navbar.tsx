@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import BrandText from '@atoms/BrandText';
 import NavbarMenu from '@molecules/NavbarMenu';
 import Button from '@atoms/Button';
-import { breakpoints } from '@matiasbn.dev/utils';
+import { breakpoints } from '@utils';
 
 type Props = {};
 
@@ -19,18 +19,49 @@ const BrandContainer = styled.div`
   padding-left: 20px;
   display: flex;
   align-items: center;
-  font-size: 0.5rem;
-`;
+  font-size: 2.5vw;
 
+  @media (min-width: 35rem) {
+    font-size: 1.5vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    padding-left: 20px;
+  }
+`;
 const BarMenuContainer = styled.div`
   display: flex;
-  align-items: center;
-  padding-right: 10px;
+  justify-content: flex-end;
+  width: 100%;
+  @media (min-width: 35rem) {
+    font-size: 2vh;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+  }
+  @media (min-width: 75rem) {
+    font-size: 1.5vw;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    width: 100%;
+  }
 `;
 
 const ButtonContainer = styled.div`
-  font-size: 0.5rem;
+  font-size: 2.5vw;
   height: 5vh;
+
+  @media (min-width: 35rem) {
+    font-size: 2vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    width: 100%;
+    padding-right: 20px;
+  }
 `;
 
 export default function Navbar({}: Props) {

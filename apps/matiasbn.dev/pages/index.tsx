@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Navbar from '@organisms/Navbar';
 import Hero from '@organisms/Hero';
-import { breakpoints } from '@matiasbn.dev/utils';
+import { breakpoints } from '@utils';
 
 const Wrapper = styled.div`
   display: grid;

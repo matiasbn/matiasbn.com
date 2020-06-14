@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { breakpoints } from '@matiasbn.dev/utils';
+import { breakpoints } from '@utils';
 type Props = {};
 
 const Wrapper = styled.div`
@@ -18,10 +18,23 @@ const ContainerTitle = styled.div`
   justify-content: center;
   margin: 0;
   color: white;
-  font-size: 4vw;
   text-align: center;
+  font-size: 4vw;
+  max-height: 100%;
   h1 {
     margin: 0;
+  }
+
+  @media (min-width: 30rem) {
+    font-size: 2.5vh;
+  }
+
+  @media (min-width: 37.5rem) {
+    font-size: 2vh;
+  }
+
+  @media (min-width: 50rem) {
+    font-size: 3vh;
   }
 `;
 
@@ -29,12 +42,20 @@ const ContainerIcon = styled.div`
   margin: 0;
   color: white;
   text-align: center;
-  font-size: 25vw;
+  font-size: 28vw;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   h1 {
     margin: 0;
+  }
+
+  @media (min-width: 37.5rem) {
+    font-size: 10rem;
+  }
+
+  @media (min-width: 50rem) {
+    font-size: 8rem;
   }
 `;
 
