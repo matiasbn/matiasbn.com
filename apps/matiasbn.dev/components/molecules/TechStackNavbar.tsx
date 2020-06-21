@@ -91,7 +91,7 @@ export default function TechStackNavbar(props: Props) {
         onClick={handleChange}
         id={ToolType.TOOLS}
       >
-        TOOLS
+        Tools
       </TechStackNavbarText>
     </Wrapper>
   );
