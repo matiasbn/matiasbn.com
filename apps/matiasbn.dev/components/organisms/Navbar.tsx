@@ -1,86 +1,50 @@
 import React from 'react';
 import styled from 'styled-components';
-import BrandText from '@atoms/BrandText';
+import NavbarBrandText from '@atoms/NavbarBrandText';
 import NavbarMenu from '@molecules/NavbarMenu';
-import Button from '@atoms/Button';
-import { breakpoints } from '@utils';
+import NavbarButton from '@atoms/NavbarButton';
 
 type Props = {};
 
-const Wrapper = styled.div`
+const Wrapper = styled.nav`
+  width: 100%;
+  background: white;
   display: grid;
-  width: 100vw;
-  grid-template-columns: 40% 35% 25%;
+  grid-template-columns: 1fr 2fr 1fr;
   justify-items: center;
   align-items: center;
-`;
+  height: 10vh;
 
-const BrandContainer = styled.div`
-  padding-left: 20px;
-  display: flex;
-  align-items: center;
-  font-size: 2.5vw;
-
-  @media (min-width: 35rem) {
-    font-size: 1.5vh;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    width: 100%;
-    padding-left: 20px;
+  .contact-button {
+    justify-self: end;
+    margin-right: 5px;
   }
-`;
-const BarMenuContainer = styled.div`
-  display: flex;
-  justify-content: flex-end;
-  width: 100%;
-  @media (min-width: 35rem) {
-    font-size: 2vh;
-    width: 100%;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-end;
-  }
-  @media (min-width: 75rem) {
-    font-size: 1.5vw;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-end;
-    width: 100%;
-  }
-`;
 
-const ButtonContainer = styled.div`
-  font-size: 2.5vw;
-  height: 5vh;
+  @media (min-height: 900px) {
+    height: 7vh;
+  }
 
-  @media (min-width: 35rem) {
-    font-size: 2vh;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-end;
-    width: 100%;
-    padding-right: 20px;
+  @media (orientation: landscape) {
+    grid-template-columns: 1fr 3fr 1fr;
+  }
+
+  @media (min-width: 1920px) {
+    grid-template-columns: 1fr 4fr 0.7fr;
   }
 `;
 
 export default function Navbar({}: Props) {
   return (
     <Wrapper>
-      <BrandContainer>
-        <BrandText>Matías Barrios</BrandText>
-      </BrandContainer>
-      <BarMenuContainer>
-        <NavbarMenu></NavbarMenu>
-      </BarMenuContainer>
-      <ButtonContainer>
-        <Button
-          href={'mailto:matias.barriosn@gmail.com?subject="Hello Matías!"'}
-          type={'button'}
-        >
-          Contact me!
-        </Button>
-      </ButtonContainer>
+      <NavbarBrandText>Matías Barrios</NavbarBrandText>
+      <NavbarMenu />
+      <NavbarButton
+        href={'mailto:matias.barriosn@gmail.com?subject="Hello Matías!"'}
+        type={'button'}
+        className={'contact-button'}
+      >
+        Contact me!
+      </NavbarButton>
     </Wrapper>
   );
 }

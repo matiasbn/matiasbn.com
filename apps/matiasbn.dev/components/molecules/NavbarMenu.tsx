@@ -1,13 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
-import NavbarText from '@atoms/NavbarText';
+import NavbarMenuText from '@atoms/NavbarMenuText';
 
 type Props = {};
 
 const Wrapper = styled.div`
   display: flex;
   justify-content: center;
-  align-items: center;
+
+  @media (orientation: landscape) {
+    justify-self: end;
+  }
 `;
 
 //const options = ['Home', 'Experience', 'Projects', 'Tech stack'];
@@ -23,9 +26,9 @@ export default function NavbarMenu({}: Props) {
   return (
     <Wrapper>
       {options.map((option) => (
-        <NavbarText key={option.title} href={option.href}>
+        <NavbarMenuText key={option.title} href={option.href}>
           {option.title}
-        </NavbarText>
+        </NavbarMenuText>
       ))}
     </Wrapper>
   );

@@ -1,17 +1,19 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Button = styled.a<{ color?: string }>`
+const NavbarButton = styled.a<{ color?: string; margin?: string }>`
   font-family: 'Comfortaa', cursive;
   background: black;
   border-radius: 5px;
   border: 0;
   color: ${(props) => (props.color ? props.color : 'white')};
+  margin: ${(props) => (props.margin ? props.margin : '0')};
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 5vh;
-  min-width: 20vw;
+  font-size: 10px;
+  height: 7vh;
+  width: 20vw;
   text-align: center;
 
   :link {
@@ -23,6 +25,21 @@ const Button = styled.a<{ color?: string }>`
     text-decoration: inherit;
     cursor: auto;
   }
+
+  @media (min-height: 900px) {
+    height: 5vh;
+    font-size: 20px;
+  }
+
+  @media (orientation: landscape) {
+    font-size: 2vw;
+    width: 15vw;
+  }
+
+  @media (min-width: 1920px) {
+    font-size: 1vw;
+    width: 10vw;
+  }
 `;
 
-export default Button;
+export default NavbarButton;
