@@ -1,14 +1,14 @@
 export enum ToolType {
   ALL = 'ALL',
+  LANGUAGE = 'LANGUAGE',
+  PROTOCOLS = 'PROTOCOLS',
   BACKEND = 'BACKEND',
   FRONTEND = 'FRONTEND',
   DATABASE = 'DATABASE',
-  LANGUAGE = 'LANGUAGE',
   BLOCKCHAIN = 'BLOCKCHAIN',
   CICD = 'CICD',
   OS = 'OS',
   TOOLS = 'TOOLS',
-  PROTOCOLS = 'PROTOCOLS',
 }
 
 export const tools = [
