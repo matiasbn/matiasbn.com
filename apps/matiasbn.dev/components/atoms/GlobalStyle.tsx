@@ -6,5 +6,6 @@ export default createGlobalStyle`
         margin: 0 auto;
         padding: 0px;
         font-family: 'MuseoModerno';
+        width: 100vw;
     }
 `;

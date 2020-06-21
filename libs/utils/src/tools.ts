@@ -1,4 +1,5 @@
 export enum ToolType {
+  ALL = 'ALL',
   BACKEND = 'BACKEND',
   FRONTEND = 'FRONTEND',
   DATABASE = 'DATABASE',
@@ -7,6 +8,7 @@ export enum ToolType {
   CICD = 'CICD',
   OS = 'OS',
   TOOLS = 'TOOLS',
+  PROTOCOLS = 'PROTOCOLS',
 }
 
 export const tools = [
@@ -218,7 +220,7 @@ export const tools = [
   {
     src: 'ethereum.png',
     href: 'https://ethereum.org/',
-    groups: [ToolType.BLOCKCHAIN],
+    groups: [ToolType.BLOCKCHAIN, ToolType.PROTOCOLS],
   },
   {
     src: 'metamask.png',
@@ -244,5 +246,35 @@ export const tools = [
     src: 'styled-components.png',
     href: 'https://styled-components.com/',
     groups: [ToolType.FRONTEND],
+  },
+  {
+    src: 'http.png',
+    href: 'https://tools.ietf.org/html/rfc2616',
+    groups: [ToolType.PROTOCOLS],
+  },
+  {
+    src: 'mqtt.png',
+    href: 'http://mqtt.org/',
+    groups: [ToolType.PROTOCOLS],
+  },
+  {
+    src: 'webstorm.png',
+    href: 'https://www.jetbrains.com/webstorm/',
+    groups: [ToolType.TOOLS],
+  },
+  {
+    src: 'vscode.png',
+    href: 'https://code.visualstudio.com/',
+    groups: [ToolType.TOOLS],
+  },
+  {
+    src: 'tls.png',
+    href: 'https://tools.ietf.org/html/rfc5246',
+    groups: [ToolType.PROTOCOLS],
+  },
+  {
+    src: 'jwt.png',
+    href: 'httpshttps://jwt.io/',
+    groups: [ToolType.PROTOCOLS],
   },
 ];

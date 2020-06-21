@@ -1,7 +1,7 @@
 import React, { AllHTMLAttributes, useEffect, useState } from 'react';
 import styled from 'styled-components';
 import TechStackIcon from '@atoms/TechStackIcon';
-import { tools } from '@utils/tools';
+import { tools, ToolType } from '@utils/tools';
 import { useContext } from '@context';
 import { loadConfigurationFromPath } from 'tslint/lib/configuration';
 
@@ -31,13 +31,12 @@ const Container = styled.div`
 export default function TechStackGallery(props: Props) {
   const {
     state: { techstackOption },
-    dispatch,
   } = useContext();
 
   const [selectedTools, setSelectedTools] = useState(tools);
 
   useEffect(() => {
-    if (techstackOption) {
+    if (techstackOption !== ToolType.ALL) {
       setSelectedTools(
         tools.filter((tool) =>
           tool.groups.some((group) => group === techstackOption)

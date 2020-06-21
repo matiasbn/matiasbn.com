@@ -33,7 +33,7 @@ function reducer(state: State, action: Action): State {
 }
 
 function getLocalState(): State | undefined {
-  const localState = loadState('giftcardState') as State;
+  const localState = loadState('appState') as State;
   if (!localState) {
     return;
   }
@@ -52,7 +52,7 @@ export function AppProvider(props: { children: ReactNode }) {
   const [state, dispatch] = React.useReducer(reducer, currentState);
 
   useEffect(() => {
-    saveState('giftcardState', state);
+    saveState('appState', state);
   }, [state]);
 
   return (

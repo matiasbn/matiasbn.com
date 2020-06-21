@@ -8,7 +8,7 @@ interface Props extends AllHTMLAttributes<{}> {}
 
 const Wrapper = styled.div`
   display: grid;
-  grid-template-columns: repeat(9, 1fr);
+  grid-template-columns: repeat(10, 1fr);
   justify-items: center;
   align-items: center;
   width: 80%;
@@ -30,69 +30,18 @@ export default function TechStackNavbar(props: Props) {
 
   return (
     <Wrapper>
-      <TechStackNavbarText
-        active={techstackOption === ''}
-        onClick={handleChange}
-        id={''}
-      >
-        All
-      </TechStackNavbarText>
-      <TechStackNavbarText
-        active={techstackOption === ToolType.LANGUAGE}
-        onClick={handleChange}
-        id={ToolType.LANGUAGE}
-      >
-        Languages
-      </TechStackNavbarText>
-      <TechStackNavbarText
-        active={techstackOption === ToolType.FRONTEND}
-        onClick={handleChange}
-        id={ToolType.FRONTEND}
-      >
-        Front-end
-      </TechStackNavbarText>
-      <TechStackNavbarText
-        active={techstackOption === ToolType.BACKEND}
-        onClick={handleChange}
-        id={ToolType.BACKEND}
-      >
-        Back-end
-      </TechStackNavbarText>
-      <TechStackNavbarText
-        active={techstackOption === ToolType.OS}
-        onClick={handleChange}
-        id={ToolType.OS}
-      >
-        OS
-      </TechStackNavbarText>
-      <TechStackNavbarText
-        active={techstackOption === ToolType.DATABASE}
-        onClick={handleChange}
-        id={ToolType.DATABASE}
-      >
-        Databases
-      </TechStackNavbarText>
-      <TechStackNavbarText
-        active={techstackOption === ToolType.BLOCKCHAIN}
-        onClick={handleChange}
-        id={ToolType.BLOCKCHAIN}
-      >
-        Blockchain
-      </TechStackNavbarText>
-      <TechStackNavbarText
-        active={techstackOption === ToolType.CICD}
-        onClick={handleChange}
-        id={ToolType.CICD}
-      >
-        CI/CD
-      </TechStackNavbarText>
-      <TechStackNavbarText
-        active={techstackOption === ToolType.TOOLS}
-        onClick={handleChange}
-        id={ToolType.TOOLS}
-      >
-        Tools
-      </TechStackNavbarText>
+      {Object.keys(ToolType).map((toolType) => (
+        <TechStackNavbarText
+          active={techstackOption === toolType}
+          onClick={handleChange}
+          id={toolType}
+        >
+          {toolType === ToolType.CICD || toolType === ToolType.OS
+            ? toolType
+            : toolType.charAt(0).toUpperCase() +
+              toolType.slice(1).toLowerCase()}
+        </TechStackNavbarText>
+      ))}
     </Wrapper>
   );
 }
