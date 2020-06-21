@@ -3,14 +3,14 @@ import styled from 'styled-components';
 
 const Icon = styled.img<{ color?: string }>`
   color: ${(props) => (props.color ? props.color : 'white')};
-  width: 30px;
+  width: 10vw;
 
   @media (min-width: 60rem) {
     width: 80px;
   }
 
   @media (orientation: landscape) {
-    width: 3vw;
+    width: 4vw;
   }
 `;
 

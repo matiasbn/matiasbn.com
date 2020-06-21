@@ -6,7 +6,7 @@ type Props = {};
 
 const Wrapper = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-auto-columns: auto;
 
   @media (orientation: landscape) {
@@ -20,10 +20,6 @@ const options = [
     title: 'Resume',
     href:
       'https://drive.google.com/file/d/1szHiZKK7u-pqogYJb2VJDVU08lF_p--6/view?usp=sharing',
-  },
-  {
-    title: 'My tech stack',
-    href: '#',
   },
 ];
 

@@ -35,11 +35,11 @@ export default class CustomDocument extends Document<{
           <link
             href="https://fonts.googleapis.com/css2?family=MuseoModerno&display=swap"
             rel="stylesheet"
-          ></link>
+          />
           <link
             href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap"
             rel="stylesheet"
-          ></link>
+          />
         </Head>
         <body>
           <Main />
