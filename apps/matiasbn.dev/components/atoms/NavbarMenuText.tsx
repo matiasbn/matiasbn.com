@@ -7,11 +7,12 @@ const NavbarMenuText = styled.a`
   align-items: center;
   font-family: 'Comfortaa', cursive;
   cursor: pointer;
+  font-size: 10px;
 
   @media (orientation: landscape) {
-    font-size: 2vw;
+    font-size: 1.2vw;
   }
-  @media (min-height: 900px) and not(orientation: landscape) {
+  @media (min-height: 900px) {
     font-size: 20px;
   }
 

@@ -30,7 +30,7 @@ const NavbarButton = styled.a<{ color?: string; margin?: string }>`
   }
 
   @media (orientation: landscape) {
-    font-size: 2vw;
+    font-size: 1.2vw;
     width: 15vw;
   }
 

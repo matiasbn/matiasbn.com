@@ -19,7 +19,8 @@
       "@atoms/*": ["apps/matiasbn.dev/components/atoms/*"],
       "@molecules/*": ["apps/matiasbn.dev/components/molecules/*"],
       "@organisms/*": ["apps/matiasbn.dev/components/organisms/*"],
-      "@utils": ["libs/utils/src/index.ts"]
+      "@context": ["apps/matiasbn.dev/context"],
+      "@utils/*": ["libs/utils/src/*"]
     }
   },
   "exclude": ["node_modules", "tmp"]

@@ -2,6 +2,7 @@
 import React from 'react';
 import Head from 'next/head';
 import App from 'next/app';
+import { AppProvider } from '@context';
 
 export default class extends App {
   render() {
@@ -12,7 +13,9 @@ export default class extends App {
         <Head>
           <title>Welcome to matiasbn.dev!</title>
         </Head>
-        <Component {...pageProps} key={router.route} />
+        <AppProvider>
+          <Component {...pageProps} key={router.route} />
+        </AppProvider>
       </>
     );
   }
