@@ -6,6 +6,7 @@ const NavbarMenuText = styled.a`
   justify-content: center;
   align-items: center;
   font-family: 'Comfortaa', cursive;
+  cursor: pointer;
 
   @media (orientation: landscape) {
     font-size: 2vw;
@@ -21,13 +22,11 @@ const NavbarMenuText = styled.a`
   :link {
     text-decoration: inherit;
     color: inherit;
-    cursor: auto;
   }
 
   :visited {
     text-decoration: inherit;
     color: inherit;
-    cursor: auto;
   }
 `;
 

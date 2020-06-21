@@ -18,12 +18,10 @@ const NavbarButton = styled.a<{ color?: string; margin?: string }>`
 
   :link {
     text-decoration: inherit;
-    cursor: auto;
   }
 
   :visited {
     text-decoration: inherit;
-    cursor: auto;
   }
 
   @media (min-height: 900px) {
