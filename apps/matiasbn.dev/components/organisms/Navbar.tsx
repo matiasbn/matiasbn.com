@@ -43,7 +43,7 @@ export default function Navbar({}: Props) {
         type={'button'}
         className={'contact-button'}
       >
-        Contact me!
+        Let's talk!
       </NavbarButton>
     </Wrapper>
   );
