@@ -31,7 +31,6 @@ export default class CustomDocument extends Document<{
             content={`width=device-width, initial-scale=1,
             maximum-scale=1, user-scalable=no`}
           />
-          {this.props.styleTags}
           <link
             href="https://fonts.googleapis.com/css2?family=MuseoModerno&display=swap"
             rel="stylesheet"
@@ -40,6 +39,8 @@ export default class CustomDocument extends Document<{
             href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap"
             rel="stylesheet"
           />
+          <link rel="shortcut icon" href="favicon.svg" />
+          {this.props.styleTags}
         </Head>
         <body>
           <Main />

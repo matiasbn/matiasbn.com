@@ -11,7 +11,7 @@ export default class extends App {
     return (
       <>
         <Head>
-          <title>Welcome to matiasbn.dev!</title>
+          <title>Hello!</title>
         </Head>
         <AppProvider>
           <Component {...pageProps} key={router.route} />
