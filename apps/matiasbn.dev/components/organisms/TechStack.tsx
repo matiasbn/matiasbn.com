@@ -3,8 +3,7 @@ import styled from 'styled-components';
 import TechStackNavbar from '@molecules/TechStackNavbar';
 import TechStackIntro from '@molecules/TechStackIntro';
 import TechStackGallery from '@molecules/TechStackGallery';
-import breakpoints from '@utils/breakpoints';
-
+import TechStackSecondaryNavbar from '@molecules/TechStackSecondaryNavbar';
 interface Props extends AllHTMLAttributes<{}> {}
 
 const Wrapper = styled.div`
@@ -31,6 +30,7 @@ export default function TechStack(props: Props) {
       <ContainerGallery>
         <TechStackNavbar />
         <TechStackGallery className={'gallery'} />
+        <TechStackSecondaryNavbar />
       </ContainerGallery>
     </Wrapper>
   );

@@ -2,7 +2,7 @@
   base = "."
   publish = "/dist/apps/matiasbn.dev/exported"
 
-# Production context:
+# Production store:
 # All deploys from the main repository branch
 # will inherit these settings.
 [context.production]
@@ -11,14 +11,14 @@
 
 
 
-# Deploy Preview context:
+# Deploy Preview store:
 # All deploys generated from a pull/merge request
 # will inherit these settings.
 [context.deploy-preview]
   command = "npm run deploy"
     [context.deploy-preview.environment]
 
-# Branch deploy context:
+# Branch deploy store:
 # All deploys that are not from a pull/merge request
 # or from the production branch will inherit these settings.
 [context.branch-deploy]

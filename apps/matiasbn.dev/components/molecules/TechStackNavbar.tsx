@@ -1,8 +1,9 @@
 import React, { AllHTMLAttributes, useEffect } from 'react';
 import styled from 'styled-components';
-import TechStackNavbarText from '@atoms/TechStackNavbarText';
-import { useContext, ActionTypes } from '@context';
+import { ActionTypes } from '@store';
+import { useSelector, useDispatch } from 'react-redux';
 import { ToolType } from '@utils/tools';
+import TechStackNavbarText from '@atoms/TechStackNavbarText';
 
 interface Props extends AllHTMLAttributes<{}> {}
 
@@ -16,10 +17,8 @@ const Wrapper = styled.div`
 `;
 
 export default function TechStackNavbar(props: Props) {
-  const {
-    dispatch,
-    state: { techstackOption },
-  } = useContext();
+  const dispatch = useDispatch();
+  const techstackOption = useSelector((state) => state.techstackOption);
 
   const handleChange = (event) => {
     dispatch({
@@ -28,13 +27,21 @@ export default function TechStackNavbar(props: Props) {
     });
   };
 
+  useEffect(() => {
+    dispatch({
+      type: ActionTypes.SET_TECHSTACK_OPTION,
+      payload: ToolType.ALL,
+    });
+  }, []);
+
   return (
     <Wrapper>
-      {Object.keys(ToolType).map((toolType) => (
+      {Object.keys(ToolType).map((toolType, index) => (
         <TechStackNavbarText
           active={techstackOption === toolType}
           onClick={handleChange}
           id={toolType}
+          key={index}
         >
           {toolType === ToolType.CICD || toolType === ToolType.OS
             ? toolType

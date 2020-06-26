@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/camelcase */
-import React from 'react';
+import React, { useEffect } from 'react';
 import Head from 'next/head';
 import App from 'next/app';
-import { AppProvider } from '@context';
+import { AppProvider } from '@store';
 
 export default class extends App {
   render() {

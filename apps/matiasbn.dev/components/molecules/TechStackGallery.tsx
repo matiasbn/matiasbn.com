@@ -1,9 +1,8 @@
 import React, { AllHTMLAttributes, useEffect, useState } from 'react';
 import styled from 'styled-components';
 import TechStackIcon from '@atoms/TechStackIcon';
-import { tools, ToolType } from '@utils/tools';
-import { useContext } from '@context';
-import { loadConfigurationFromPath } from 'tslint/lib/configuration';
+import { Experience, tools, ToolType } from '@utils/tools';
+import { useSelector } from 'react-redux';
 
 interface Props extends AllHTMLAttributes<{}> {}
 
@@ -29,23 +28,32 @@ const Container = styled.div`
 `;
 
 export default function TechStackGallery(props: Props) {
-  const {
-    state: { techstackOption },
-  } = useContext();
+  const techstackOption = useSelector((state) => state.techstackOption);
+  const experienceOption = useSelector((state) => state.experienceOption);
 
   const [selectedTools, setSelectedTools] = useState(tools);
 
   useEffect(() => {
-    if (techstackOption !== ToolType.ALL) {
-      setSelectedTools(
-        tools.filter((tool) =>
+    if (
+      techstackOption !== ToolType.ALL ||
+      experienceOption !== Experience.ALL
+    ) {
+      let auxTools = tools;
+      if (techstackOption !== ToolType.ALL) {
+        auxTools = auxTools.filter((tool) =>
           tool.groups.some((group) => group === techstackOption)
-        )
-      );
+        );
+      }
+      if (experienceOption !== Experience.ALL) {
+        auxTools = auxTools.filter(
+          (tool) => tool.experience === experienceOption
+        );
+      }
+      setSelectedTools(auxTools);
     } else {
       setSelectedTools(tools);
     }
-  }, [techstackOption]);
+  }, [techstackOption, experienceOption]);
 
   return (
     <Wrapper>
