@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { AllHTMLAttributes } from 'react';
 import styled from 'styled-components';
 
 const DisclaimerSubtitle = styled.h1<{
