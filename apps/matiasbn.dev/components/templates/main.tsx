@@ -8,7 +8,7 @@ import Disclaimer from '@organisms/Disclaimer';
 
 const Wrapper = styled.div``;
 
-export const Main = () => {
+export default function Main() {
   return (
     <Wrapper>
       <Navbar />
@@ -18,5 +18,4 @@ export const Main = () => {
       <Footer />
     </Wrapper>
   );
-};
-export default Main;
+}

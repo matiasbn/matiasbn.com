@@ -6,15 +6,15 @@ import { useSelector } from 'react-redux';
 
 const Wrapper = styled.div``;
 
-export const Index = () => {
+export default function Index() {
   const state = useSelector((state) => state);
   useEffect(() => {
     saveState('appState', state);
   }, [state]);
+
   return (
     <Wrapper>
       <Main />
     </Wrapper>
   );
-};
-export default Index;
+}
