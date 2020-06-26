@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const TechStackIcon = styled.img<{ color?: string }>`
   margin: 0;
   color: ${(props) => (props.color ? props.color : 'white')};
-  width: 5vw;
+  width: 60px;
 `;
 
 export default TechStackIcon;

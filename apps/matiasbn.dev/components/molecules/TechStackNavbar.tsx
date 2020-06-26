@@ -27,13 +27,6 @@ export default function TechStackNavbar(props: Props) {
     });
   };
 
-  useEffect(() => {
-    dispatch({
-      type: ActionTypes.SET_TECHSTACK_OPTION,
-      payload: ToolType.ALL,
-    });
-  }, []);
-
   return (
     <Wrapper>
       {Object.keys(ToolType).map((toolType, index) => (

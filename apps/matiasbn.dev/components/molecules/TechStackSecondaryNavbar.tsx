@@ -27,13 +27,6 @@ export default function TechStackSecondaryNavbar(props: Props) {
     });
   };
 
-  useEffect(() => {
-    dispatch({
-      type: ActionTypes.SET_TECHSTACK_EXPERIENCE,
-      payload: Experience.ALL,
-    });
-  }, []);
-
   return (
     <Wrapper>
       {Object.keys(Experience).map((experience, index) => (

@@ -7,8 +7,8 @@ import { createStore } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 
 const initialState = {
-  techstackOption: '',
-  experienceOption: '',
+  techstackOption: ToolType.ALL,
+  experienceOption: Experience.ALL,
 };
 
 type State = typeof initialState;
