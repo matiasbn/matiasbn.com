@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { ActionTypes } from '@store';
 import { useSelector, useDispatch } from 'react-redux';
 import { ToolType } from '@utils/tools';
-import TechStackNavbarText from '@atoms/TechStackNavbarText';
+import TechStackNavbarText from '@atoms/ts-navbar-text';
 
 interface Props extends AllHTMLAttributes<{}> {}
 

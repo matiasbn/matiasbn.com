@@ -1,7 +1,7 @@
 import React, { AllHTMLAttributes } from 'react';
 import styled from 'styled-components';
-import DisclaimerTitle from '@atoms/DisclaimerTitle';
-import DisclaimerSubtitle from '@atoms/DisclaimerSubtitle';
+import DisclaimerTitle from '@atoms/dc-title';
+import DisclaimerSubtitle from '@atoms/dc-subtitle';
 
 interface Props extends AllHTMLAttributes<{}> {}
 

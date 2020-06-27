@@ -1,6 +1,6 @@
 import React, { AllHTMLAttributes, useEffect } from 'react';
 import styled from 'styled-components';
-import TechStackSecondaryNavbarText from '@atoms/TechStackSecondaryNavbarText';
+import TechStackSecondaryNavbarText from '@atoms/ts-secondary-navbar-text';
 import { ActionTypes } from '@store';
 import { useSelector, useDispatch } from 'react-redux';
 import { Experience } from '@utils/tools';

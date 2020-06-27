@@ -1,9 +1,9 @@
 import React, { AllHTMLAttributes } from 'react';
 import styled from 'styled-components';
-import TechStackNavbar from '@molecules/TechStackNavbar';
-import TechStackIntro from '@molecules/TechStackIntro';
-import TechStackGallery from '@molecules/TechStackGallery';
-import TechStackSecondaryNavbar from '@molecules/TechStackSecondaryNavbar';
+import TechStackNavbar from '@molecules/ts-navbar';
+import TechStackIntro from '@molecules/ts-intro';
+import TechStackGallery from '@molecules/ts-gallery';
+import TechStackSecondaryNavbar from '@molecules/ts-secondary-navbar';
 interface Props extends AllHTMLAttributes<{}> {}
 
 const Wrapper = styled.div`

@@ -1,6 +1,6 @@
 import React, { AllHTMLAttributes, useEffect, useState } from 'react';
 import styled from 'styled-components';
-import TechStackIcon from '@atoms/TechStackIcon';
+import TechStackIcon from '@atoms/ts-stack-icon';
 import { Experience, tools, ToolType } from '@utils/tools';
 import { useSelector } from 'react-redux';
 

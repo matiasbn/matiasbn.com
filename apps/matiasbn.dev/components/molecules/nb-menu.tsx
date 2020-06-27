@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import NavbarMenuText from '@atoms/NavbarMenuText';
+import NavbarMenuText from '@atoms/nb-menu-text';
 
 type Props = {};
 

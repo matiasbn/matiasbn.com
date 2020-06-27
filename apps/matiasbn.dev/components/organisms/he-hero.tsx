@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import HeroTitle from '@atoms/HeroTitle';
-import HeroIcon from '@atoms/HeroIcon';
+import HeroTitle from '@atoms/he-title';
+import HeroIcon from '@atoms/he-icon';
 type Props = {};
 
 const Wrapper = styled.div`

@@ -1,7 +1,7 @@
 import React, { AllHTMLAttributes } from 'react';
 import styled from 'styled-components';
-import FooterText from '@atoms/FooterText';
-import FooterIcon from '@atoms/FooterIcon';
+import FooterText from '@atoms/ft-text';
+import FooterIcon from '@atoms/tf-icon';
 
 interface Props extends AllHTMLAttributes<{}> {}
 

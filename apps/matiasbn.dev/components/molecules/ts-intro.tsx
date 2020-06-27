@@ -1,7 +1,7 @@
 import React, { AllHTMLAttributes } from 'react';
 import styled from 'styled-components';
-import TechStackIntroTitle from '@atoms/TechStackIntroTitle';
-import TechStackIntroSubttile from '@atoms/TechStackIntroSubttile';
+import TechStackIntroTitle from '@atoms/ts-intro-title';
+import TechStackIntroSubttile from '@atoms/ts-intro-subtitle';
 
 interface Props extends AllHTMLAttributes<{}> {}
 

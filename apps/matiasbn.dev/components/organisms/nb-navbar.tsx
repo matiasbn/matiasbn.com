@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import NavbarBrandText from '@atoms/NavbarBrandText';
-import NavbarMenu from '@molecules/NavbarMenu';
-import NavbarButton from '@atoms/NavbarButton';
+import NavbarBrandText from '@atoms/nb-brand-text';
+import NavbarMenu from '@molecules/nb-menu';
+import NavbarButton from '@atoms/nb-button';
 
 type Props = {};
 

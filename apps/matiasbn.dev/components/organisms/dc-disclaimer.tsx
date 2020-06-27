@@ -1,6 +1,6 @@
 import React, { AllHTMLAttributes } from 'react';
 import styled from 'styled-components';
-import DisclaimerMessage from '@molecules/DisclaimerMessage';
+import DisclaimerMessage from '@molecules/dc-message';
 
 interface Props extends AllHTMLAttributes<{}> {}
 

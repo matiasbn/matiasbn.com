@@ -22,10 +22,7 @@ type Action =
   | { type: ActionTypes.SET_TECHSTACK_OPTION; payload: ToolType }
   | { type: ActionTypes.SET_TECHSTACK_EXPERIENCE; payload: Experience };
 
-export function reducer(
-  state: State = getCurrentState(),
-  action: Action
-): State {
+export function reducer(state: State = initialState, action: Action): State {
   switch (action.type) {
     case ActionTypes.SET_TECHSTACK_OPTION: {
       return {
@@ -61,7 +58,7 @@ function getCurrentState(): State {
 }
 
 export function AppProvider(props: { children: ReactNode }) {
-  const store = createStore(reducer, getCurrentState(), composeWithDevTools());
+  const store = createStore(reducer, composeWithDevTools());
 
   return <Provider store={store}>{props.children}</Provider>;
 }

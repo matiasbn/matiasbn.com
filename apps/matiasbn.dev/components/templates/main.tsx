@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import Navbar from '@organisms/Navbar';
-import Hero from '@organisms/Hero';
-import Footer from '@organisms/Footer';
-import TechStack from '@organisms/TechStack';
-import Disclaimer from '@organisms/Disclaimer';
+import Navbar from '@organisms/nb-navbar';
+import Hero from '@organisms/he-hero';
+import Footer from '@organisms/ft-footer';
+import TechStack from '@organisms/ts-techstack';
+import Disclaimer from '@organisms/dc-disclaimer';
 
 const Wrapper = styled.div``;
 

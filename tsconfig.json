@@ -19,6 +19,7 @@
       "@atoms/*": ["apps/matiasbn.dev/components/atoms/*"],
       "@molecules/*": ["apps/matiasbn.dev/components/molecules/*"],
       "@organisms/*": ["apps/matiasbn.dev/components/organisms/*"],
+      "@templates/*": ["apps/matiasbn.dev/components/templates/*"],
       "@store": ["apps/matiasbn.dev/store"],
       "@utils/*": ["libs/utils/src/*"]
     }
