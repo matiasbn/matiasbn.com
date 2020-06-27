@@ -15,8 +15,8 @@ const Wrapper = styled.div`
 const Container = styled.div`
   background: white;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-row-gap: 20px;
+  grid-template-columns: repeat(6, minmax(80px, auto));
+  grid-auto-rows: 90px;
   justify-items: center;
   align-items: center;
   border-color: #eee9ed;

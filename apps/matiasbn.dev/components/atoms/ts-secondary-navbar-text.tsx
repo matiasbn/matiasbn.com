@@ -11,6 +11,7 @@ const TechStackSecondaryNavbarText = styled.p<{ active?: boolean }>`
   height: 100%;
   border-bottom-left-radius: 1em 1em;
   border-bottom-right-radius: 1em 1em;
+  cursor: pointer;
   :hover {
     color: grey;
   }

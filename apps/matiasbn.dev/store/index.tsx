@@ -1,8 +1,8 @@
 /* eslint-disable indent */
-import React, { ReactNode, useEffect } from 'react';
-import { loadState, saveState } from '@utils/localStorage';
+import React, { ReactNode } from 'react';
+import { loadState } from '@utils/localStorage';
 import { ToolType, Experience } from '@utils/tools';
-import { Provider, useSelector } from 'react-redux';
+import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 
