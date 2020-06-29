@@ -1,32 +1,22 @@
 import React from 'react';
 import styled from 'styled-components';
+import { breakpoints } from '@utils/breakpoints';
 
 const TechStackIcon = styled.img<{ color?: string }>`
   margin: 0;
   color: ${(props) => (props.color ? props.color : 'white')};
-  width: 60px;
   transition: width 0.1s ease-out;
-
+  width: 25px;
   &:hover {
-    width: 70px;
+    width: 25px;
     transition: width 0.1s ease-in;
   }
+  @media (${breakpoints.desktop.min}) {
+    width: 60px;
 
-  @keyframes augment {
-    from {
-      width: 60px;
-    }
-    to {
-      width: 80px;
-    }
-  }
-
-  @keyframes small {
-    from {
-      width: 80px;
-    }
-    to {
-      width: 60px;
+    &:hover {
+      width: 70px;
+      transition: width 0.1s ease-in;
     }
   }
 `;
