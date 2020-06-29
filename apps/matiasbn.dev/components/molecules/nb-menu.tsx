@@ -12,7 +12,7 @@ const Wrapper = styled.div`
   justify-self: end;
   padding-right: 10px;
 
-  @media (${breakpoints.desktop.min}) {
+  @media (${breakpoints.desktop}) {
     padding-right: 10px;
   }
 
@@ -24,7 +24,7 @@ const Wrapper = styled.div`
 //const options = ['Home', 'Experience', 'Projects', 'Tech stack'];
 const options = [
   {
-    title: 'Resume',
+    title: 'My resume',
     href:
       'https://drive.google.com/file/d/1szHiZKK7u-pqogYJb2VJDVU08lF_p--6/view?usp=sharing',
   },

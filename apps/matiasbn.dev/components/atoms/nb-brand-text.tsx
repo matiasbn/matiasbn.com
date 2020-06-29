@@ -8,18 +8,22 @@ const NavbarBrandText = styled.a`
   font-size: 15px;
   font-family: 'MuseoModerno';
 
-  @media (${breakpoints.smallPhone.min}) {
+  @media (${breakpoints.smallPhone}) {
     font-size: 10px;
-  }
-
-  @media (${breakpoints.tabletPortrait.min}) {
-    font-size: 20px;
   }
 
   @media (orientation: landscape) {
     justify-self: start;
     padding-left: 10px;
     font-size: 2vw;
+  }
+
+  @media (${breakpoints.tabletPortrait}) {
+    font-size: 25px;
+  }
+
+  @media (${breakpoints.desktopWide}) {
+    font-size: 40px;
   }
 `;
 

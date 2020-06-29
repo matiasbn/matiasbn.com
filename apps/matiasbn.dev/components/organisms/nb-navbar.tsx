@@ -20,8 +20,11 @@ const Wrapper = styled.nav`
     justify-self: end;
     margin-right: 5px;
   }
+  @media (orientation: landscape) {
+    height: 10vh;
+  }
 
-  @media (${breakpoints.desktop.min}) {
+  @media (${breakpoints.desktop}) {
     grid-template-columns: 2fr 5fr 1fr;
   }
 `;

@@ -19,8 +19,14 @@ const NavbarMenuText = styled.a`
     text-decoration: inherit;
     color: inherit;
   }
-  @media (${breakpoints.desktop.min}) {
+  @media (${breakpoints.tabletPortrait}) {
     font-size: 20px;
+  }
+  @media (${breakpoints.desktop}) {
+    font-size: 20px;
+  }
+  @media (${breakpoints.desktopWide}) {
+    font-size: 25px;
   }
 `;
 

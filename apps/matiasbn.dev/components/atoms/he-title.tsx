@@ -10,19 +10,27 @@ const HeroTitle = styled.p<{ color?: string }>`
   padding: 5px;
   animation: opacity-animation 2s;
 
+  @media (${breakpoints.tabletPortrait}) and (orientation: portrait) {
+    font-size: 80px;
+  }
+
+  @media (${breakpoints.tabletPortrait}) {
+    font-size: 70px;
+  }
+
+  @media (${breakpoints.desktop}) {
+    font-size: 80px;
+  }
+
+  @media (${breakpoints.smallPhonePortrait.max}) {
+    font-size: 35px;
+  }
+
   @media (orientation: portrait) {
     text-align: center;
     font-size: 40px;
     animation: opacity-animation 2s;
     animation-fill-mode: forwards;
-  }
-
-  @media (${breakpoints.tabletPortrait.min}) {
-    font-size: 80px;
-  }
-
-  @media (${breakpoints.desktop.min}) {
-    font-size: 20px;
   }
 
   @keyframes opacity-animation {

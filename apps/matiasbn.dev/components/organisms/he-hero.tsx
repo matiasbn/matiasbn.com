@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import HeroTitle from '@atoms/he-title';
 import HeroIcon from '@atoms/he-icon';
 import HeroSubtitle from '@atoms/he-subtitle';
+import breakpoints from '@utils/breakpoints';
 
 type Props = {};
 
@@ -33,14 +34,44 @@ const Wrapper = styled.div`
 `;
 
 const ContainerTitle = styled.div`
+  .landscape {
+    font-size: 20px;
+  }
+  .landscape p {
+    margin: 0px;
+  }
+
+  @media (${breakpoints.smallPhonePortrait.max}) {
+    .landscape {
+      font-size: 15px;
+    }
+  }
+
+  @media (${breakpoints.tabletPortrait}) {
+    .landscape {
+      font-size: 30px;
+    }
+  }
+
   @media (orientation: portrait) {
     display: grid;
     grid-auto-rows: auto;
+    .landscape {
+      display: none;
+    }
+  }
+  @media (orientation: landscape) {
+    .portrait {
+      display: none;
+    }
   }
 `;
 
 const ContainerIcon = styled.div`
   align-self: flex-start;
+  @media (orientation: landscape) {
+    align-self: center;
+  }
 `;
 
 export default function Hero({}: Props) {
@@ -49,7 +80,14 @@ export default function Hero({}: Props) {
       <ContainerTitle>
         <HeroTitle>Hi, I'm Matías.</HeroTitle>
         <HeroSubtitle>
-          Fullstack JS Developer/ Computers Engineer/ Blockchain Mentor
+          <div className={'landscape'}>
+            <p>Fullstack JS Developer</p>
+            <p>Computers Engineer</p>
+            <p>Blockchain Mentor</p>
+          </div>
+          <div className={'portrait'}>
+            Fullstack JS Developer / Computers Engineer / Blockchain Mentor
+          </div>
         </HeroSubtitle>
       </ContainerTitle>
       <ContainerIcon>

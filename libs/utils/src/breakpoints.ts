@@ -1,44 +1,24 @@
 export const breakpoints = {
   smallPhone: {
-    min: 'min-width: 0',
+    min: 'min-width: 320px',
     max: 'max-width: 320px',
   },
-  phonePortrait: {
-    min: 'min-width: 321px',
-    max: 'max-width: 414px',
+  smallPhonePortrait: {
+    min: 'min-width: 568px',
+    max: 'max-width: 568px',
   },
-  phoneLandscape: {
-    min: 'min-width: 415px',
-    max: 'max-width: 667px',
-  },
-  tabletPortrait: {
-    min: 'min-width: 768px',
-    max: 'max-width: 768px',
-  },
-  tabletLandscape: {
-    min: 'min-width: 769px',
-    max: 'max-width: 1024px',
-  },
-  desktop: {
-    min: 'min-width: 1025px',
-    max: 'max-width: 1366px',
-  },
-  desktopWide: {
-    min: 'min-width: 1367px',
-    max: 'max-width: 1680px',
-  },
-  desktopHD: {
-    min: 'min-width: 1681px',
-    max: 'max-width: 1920px',
-  },
-  desktopMega: {
-    min: 'min-width: 1921px',
-    max: 'max-width: 2560px',
-  },
+  phonePortrait: 'min-width: 321px',
+  phoneLandscape: 'min-width: 415px',
+  tabletPortrait: 'min-width: 768px',
+  tabletLandscape: 'min-width: 1024px',
+  desktop: 'min-width: 1025px',
+  desktopWide: 'min-width: 1367px',
+  desktopHD: 'min-width: 1681px',
+  desktopMega: 'min-width: 1921px',
 };
 
 export const isDesktop = () => {
-  return window.matchMedia(`(${breakpoints.desktop.min})`).matches;
+  return window.matchMedia(`(${breakpoints.desktop})`).matches;
 };
 
 export default breakpoints;

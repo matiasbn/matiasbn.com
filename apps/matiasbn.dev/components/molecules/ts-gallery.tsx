@@ -28,7 +28,7 @@ const Container = styled.div<{ toolsAmount: number }>`
   border-radius: 10px;
   margin: 10px;
 
-  @media (${breakpoints.desktop.min}) {
+  @media (${breakpoints.desktop}) {
     grid-template-columns: repeat(
       ${(props) => columnCalculator(props.toolsAmount)},
       minmax(70px, auto)

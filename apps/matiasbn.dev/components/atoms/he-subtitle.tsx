@@ -6,11 +6,11 @@ const HeroSubtitle = styled.p<{ color?: string }>`
   margin: 0px;
   color: ${(props) => (props.color ? props.color : 'white')};
   text-align: left;
-  font-size: 20px;
+  font-size: 10px;
   padding: 5px;
   opacity: 0;
-  animation: opacity-animation 5s;
-  animation-delay: 1s;
+  animation: opacity-animation 3s;
+  animation-delay: 0.6s;
   animation-fill-mode: forwards;
 
   @media (orientation: portrait) {
@@ -20,11 +20,11 @@ const HeroSubtitle = styled.p<{ color?: string }>`
     animation-fill-mode: forwards;
   }
 
-  @media (${breakpoints.tabletPortrait.min}) {
+  @media (${breakpoints.tabletPortrait}) {
     font-size: 20px;
   }
 
-  @media (${breakpoints.desktop.min}) {
+  @media (${breakpoints.desktop}) {
     font-size: 20px;
   }
   @keyframes opacity-animation {

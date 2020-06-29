@@ -18,14 +18,22 @@ const NavbarButton = styled.a<{ color?: string; margin?: string }>`
   text-align: center;
   text-decoration: inherit;
 
-  @media (${breakpoints.desktop.min}) {
-    font-size: 20px;
+  @media (${breakpoints.tabletPortrait}) {
     width: 120px;
+    height: 30px;
+    font-size: 18px;
   }
 
-  @media (${breakpoints.tabletPortrait.min}) {
-    width: 90px;
-    font-size: 12px;
+  @media (${breakpoints.desktop}) {
+    font-size: 22px;
+    height: 40px;
+    width: 125px;
+  }
+
+  @media (${breakpoints.desktopWide}) {
+    font-size: 30px;
+    height: 50px;
+    width: 180px;
   }
 `;
 

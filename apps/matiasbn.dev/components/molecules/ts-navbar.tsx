@@ -16,7 +16,7 @@ const Wrapper = styled.nav`
   width: 80%;
   height: 100%;
   position: relative;
-  @media (${breakpoints.desktop.min}) {
+  @media (${breakpoints.desktop}) {
     display: grid;
     grid-template-columns: repeat(10, 8vw);
   }
