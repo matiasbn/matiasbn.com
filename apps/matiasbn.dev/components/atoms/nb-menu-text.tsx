@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import breakpoints from '@utils/breakpoints';
 
 const NavbarMenuText = styled.a`
   display: flex;
@@ -8,18 +9,7 @@ const NavbarMenuText = styled.a`
   font-family: 'Comfortaa', cursive;
   cursor: pointer;
   font-size: 10px;
-
-  @media (orientation: landscape) {
-    font-size: 1.2vw;
-  }
-  @media (min-height: 900px) {
-    font-size: 20px;
-  }
-
-  @media (min-width: 1920px) {
-    font-size: 1.5vw;
-  }
-
+  text-decoration: none;
   :link {
     text-decoration: inherit;
     color: inherit;
@@ -28,6 +18,9 @@ const NavbarMenuText = styled.a`
   :visited {
     text-decoration: inherit;
     color: inherit;
+  }
+  @media (${breakpoints.desktop.min}) {
+    font-size: 20px;
   }
 `;
 

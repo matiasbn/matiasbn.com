@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import NavbarMenuText from '@atoms/nb-menu-text';
+import breakpoints from '@utils/breakpoints';
 
 type Props = {};
 
@@ -8,6 +9,12 @@ const Wrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   grid-auto-columns: auto;
+  justify-self: end;
+  padding-right: 10px;
+
+  @media (${breakpoints.desktop.min}) {
+    padding-right: 10px;
+  }
 
   @media (orientation: landscape) {
     justify-self: end;

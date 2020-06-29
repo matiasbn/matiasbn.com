@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import breakpoints from '@utils/breakpoints';
 
 const NavbarButton = styled.a<{ color?: string; margin?: string }>`
   font-family: 'Comfortaa', cursive;
@@ -12,31 +13,19 @@ const NavbarButton = styled.a<{ color?: string; margin?: string }>`
   justify-content: center;
   align-items: center;
   font-size: 10px;
-  height: 7vh;
-  width: 20vw;
+  height: 20px;
+  width: 60px;
   text-align: center;
+  text-decoration: inherit;
 
-  :link {
-    text-decoration: inherit;
-  }
-
-  :visited {
-    text-decoration: inherit;
-  }
-
-  @media (min-height: 900px) {
-    height: 5vh;
+  @media (${breakpoints.desktop.min}) {
     font-size: 20px;
+    width: 120px;
   }
 
-  @media (orientation: landscape) {
-    font-size: 1.2vw;
-    width: 15vw;
-  }
-
-  @media (min-width: 1920px) {
-    font-size: 1vw;
-    width: 10vw;
+  @media (${breakpoints.tabletPortrait.min}) {
+    width: 90px;
+    font-size: 12px;
   }
 `;
 

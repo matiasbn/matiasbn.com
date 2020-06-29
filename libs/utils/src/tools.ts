@@ -145,7 +145,7 @@ export const tools = [
   {
     src: 'jest.png',
     href: 'https://jestjs.io/',
-    groups: [ToolType.BACKEND, ToolType.TOOLS],
+    groups: [ToolType.TOOLS],
     experience: Experience.ADVANCED,
   },
   {

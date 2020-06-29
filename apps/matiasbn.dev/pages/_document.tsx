@@ -12,7 +12,8 @@ export default class CustomDocument extends Document<{
     const page = renderPage((App) => (props) =>
       sheet.collectStyles(
         <>
-          <App {...props} /> <GlobalStyle />
+          <GlobalStyle />
+          <App {...props} />
         </>
       )
     );

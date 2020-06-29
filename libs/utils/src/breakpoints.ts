@@ -12,7 +12,7 @@ export const breakpoints = {
     max: 'max-width: 667px',
   },
   tabletPortrait: {
-    min: 'min-width: 668px',
+    min: 'min-width: 768px',
     max: 'max-width: 768px',
   },
   tabletLandscape: {

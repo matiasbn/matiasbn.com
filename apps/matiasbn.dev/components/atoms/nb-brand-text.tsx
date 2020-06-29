@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import breakpoints from '@utils/breakpoints';
 
 const NavbarBrandText = styled.a`
   margin: 0;
@@ -7,9 +8,14 @@ const NavbarBrandText = styled.a`
   font-size: 15px;
   font-family: 'MuseoModerno';
 
-  @media (min-height: 900px) {
-    font-size: 25px;
+  @media (${breakpoints.smallPhone.min}) {
+    font-size: 10px;
   }
+
+  @media (${breakpoints.tabletPortrait.min}) {
+    font-size: 20px;
+  }
+
   @media (orientation: landscape) {
     justify-self: start;
     padding-left: 10px;
