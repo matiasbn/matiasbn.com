@@ -7,8 +7,8 @@ interface Props extends AllHTMLAttributes<{}> {}
 
 const Wrapper = styled.div`
   border-top: 1px solid #6e6e6e;
-  margin-top: 20px;
   padding-top: 10px;
+  padding-bottom: 30px;
   background: white;
   display: grid;
   grid-auto-rows: auto;

@@ -3,7 +3,7 @@ import Layout from '@templates/layout';
 import styled from 'styled-components';
 import { saveState } from '@utils/localStorage';
 import { useSelector } from 'react-redux';
-import Hero from '@organisms/he-hero';
+import TechStack from '@organisms/ts-techstack';
 
 const Wrapper = styled.div``;
 
@@ -16,7 +16,7 @@ export default function Index() {
   return (
     <Layout>
       <Wrapper>
-        <Hero></Hero>
+        <TechStack />
       </Wrapper>
     </Layout>
   );

@@ -12,6 +12,8 @@ const Wrapper = styled.div`
   align-items: center;
   justify-items: center;
   padding: 30px;
+  background: #282828;
+  width: 100%;
 `;
 
 export default function TechStackIntro(props: Props) {
@@ -19,7 +21,8 @@ export default function TechStackIntro(props: Props) {
     <Wrapper>
       <TechStackIntroTitle>This is my 🧰</TechStackIntroTitle>
       <TechStackIntroSubttile>
-        Here i try to recopilate all the tools i'm used to work with.
+        Here I try to collect all the tools that I have used throughout my
+        career.
       </TechStackIntroSubttile>
     </Wrapper>
   );

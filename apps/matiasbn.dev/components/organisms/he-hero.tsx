@@ -8,14 +8,15 @@ import breakpoints from '@utils/breakpoints';
 type Props = {};
 
 const Wrapper = styled.div`
-  background: black;
+  background: #282828;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  height: 95vh;
+  height: 90vh;
 
   @media (orientation: landscape) {
+    height: 100vh;
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -47,7 +48,7 @@ const ContainerTitle = styled.div`
     }
   }
 
-  @media (${breakpoints.tabletPortrait}) {
+  @media (${breakpoints.tabletPortrait}) and (orientation: portrait) {
     .landscape {
       font-size: 30px;
     }

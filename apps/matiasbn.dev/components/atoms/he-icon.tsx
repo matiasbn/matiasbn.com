@@ -12,16 +12,16 @@ const HeroIcon = styled.p<{ color?: string }>`
   @media (${breakpoints.smallPhonePortrait.max}) {
     font-size: 120px;
   }
-  @media (${breakpoints.tabletPortrait}) {
+  @media (${breakpoints.tabletPortrait}) and (orientation: portrait) {
+    font-size: 250px;
+  }
+
+  @media (${breakpoints.desktop}) {
     font-size: 300px;
   }
 
   @media (${breakpoints.desktop}) {
-    font-size: 400px;
-  }
-
-  @media (${breakpoints.tabletPortrait}) and (orientation: portrait) {
-    font-size: 250px;
+    font-size: 300px;
   }
 `;
 

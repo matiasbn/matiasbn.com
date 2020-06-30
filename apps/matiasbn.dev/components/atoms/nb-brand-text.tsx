@@ -6,10 +6,11 @@ const NavbarBrandText = styled.a`
   margin: 0;
   text-align: center;
   font-size: 15px;
-  font-family: 'MuseoModerno';
+  cursor: pointer;
+  color: #73f9d9;
 
   @media (${breakpoints.smallPhone}) {
-    font-size: 10px;
+    font-size: 5px;
   }
 
   @media (orientation: landscape) {

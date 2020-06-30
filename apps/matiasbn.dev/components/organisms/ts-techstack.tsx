@@ -12,6 +12,7 @@ const Wrapper = styled.div`
   align-items: center;
   grid-auto-rows: auto;
   grid-row-gap: 10px;
+  margin-bottom: 20px;
   @media (orientation: portrait) {
     display: none;
   }

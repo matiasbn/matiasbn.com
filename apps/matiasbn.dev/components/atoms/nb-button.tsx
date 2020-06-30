@@ -4,7 +4,7 @@ import breakpoints from '@utils/breakpoints';
 
 const NavbarButton = styled.a<{ color?: string; margin?: string }>`
   font-family: 'Comfortaa', cursive;
-  background: black;
+  background: #282828;
   border-radius: 5px;
   border: 0;
   color: ${(props) => (props.color ? props.color : 'white')};
@@ -12,13 +12,12 @@ const NavbarButton = styled.a<{ color?: string; margin?: string }>`
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 10px;
-  height: 20px;
-  width: 60px;
+  font-size: 15px;
+  height: 30px;
   text-align: center;
   text-decoration: inherit;
 
-  @media (${breakpoints.tabletPortrait}) {
+  @media (${breakpoints.tabletPortrait}) and (orientation: portrait) {
     width: 120px;
     height: 30px;
     font-size: 18px;
@@ -31,9 +30,15 @@ const NavbarButton = styled.a<{ color?: string; margin?: string }>`
   }
 
   @media (${breakpoints.desktopWide}) {
-    font-size: 30px;
-    height: 50px;
-    width: 180px;
+    font-size: 25px;
+    height: 40px;
+    width: 160px;
+  }
+
+  @media (${breakpoints.smallPhone}) {
+    font-size: 25px;
+    height: 40px;
+    width: 160px;
   }
 `;
 

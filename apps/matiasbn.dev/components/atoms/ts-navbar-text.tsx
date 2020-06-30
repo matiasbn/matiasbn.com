@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const TechStackNavbarText = styled.a<{ active?: boolean }>`
   margin: 0;
-  color: ${(props) => (props.active ? 'white' : 'black')};
+  color: ${(props) => (props.active ? 'white' : '#282828')};
   text-align: center;
   font-size: 1.2vw;
   width: 100%;

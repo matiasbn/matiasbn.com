@@ -8,6 +8,7 @@ const NavbarMenuText = styled.a`
   align-items: center;
   font-family: 'Comfortaa', cursive;
   cursor: pointer;
+  color: white;
   font-size: 10px;
   text-decoration: none;
   :link {
@@ -22,11 +23,16 @@ const NavbarMenuText = styled.a`
   @media (${breakpoints.tabletPortrait}) {
     font-size: 20px;
   }
-  @media (${breakpoints.desktop}) {
-    font-size: 20px;
+  @media (orientation: landscape) {
+    p {
+      display: none;
+    }
+    img {
+      width: 20px;
+    }
   }
   @media (${breakpoints.desktopWide}) {
-    font-size: 25px;
+    font-size: 20px;
   }
 `;
 

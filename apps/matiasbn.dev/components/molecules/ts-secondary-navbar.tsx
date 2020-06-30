@@ -31,7 +31,7 @@ const NavBarSelector = styled.div<{ indexSelector?: number }>`
   grid-template-columns: ${tabWidth};
   border-bottom-left-radius: 1em 1em;
   border-bottom-right-radius: 1em 1em;
-  background: black;
+  background: #282828;
   left: ${(props) => (props.indexSelector ? props.indexSelector * 20 : 0)}vw;
   height: 100%;
   color: white;

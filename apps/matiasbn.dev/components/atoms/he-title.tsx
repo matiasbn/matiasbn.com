@@ -14,10 +14,6 @@ const HeroTitle = styled.p<{ color?: string }>`
     font-size: 80px;
   }
 
-  @media (${breakpoints.tabletPortrait}) {
-    font-size: 70px;
-  }
-
   @media (${breakpoints.desktop}) {
     font-size: 80px;
   }

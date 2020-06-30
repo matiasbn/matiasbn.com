@@ -42,7 +42,7 @@ const Container = styled.div<{ toolsAmount: number }>`
 
 const Wrapper = styled.div`
   width: 85%;
-  background: black;
+  background: #282828;
   border-radius: 10px;
 `;
 

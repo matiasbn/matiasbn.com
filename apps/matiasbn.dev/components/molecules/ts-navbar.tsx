@@ -29,7 +29,7 @@ const NavBarSelector = styled.div<{ indexSelector?: number }>`
   grid-template-columns: 8vw;
   border-top-left-radius: 1em 1em;
   border-top-right-radius: 1em 1em;
-  background: black;
+  background: #282828;
   left: ${(props) => (props.indexSelector ? props.indexSelector * 8 : 0)}vw;
   height: 100%;
   color: white;

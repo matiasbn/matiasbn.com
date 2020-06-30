@@ -9,6 +9,7 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 const initialState = {
   techstackOption: ToolType.ALL,
   experienceOption: Experience.ALL,
+  navBarClicked: false,
 };
 
 type State = typeof initialState;
@@ -16,11 +17,13 @@ type State = typeof initialState;
 export enum ActionTypes {
   'SET_TECHSTACK_OPTION' = 'SET_TECHSTACK_OPTION',
   'SET_TECHSTACK_EXPERIENCE' = 'SET_TECHSTACK_EXPERIENCE',
+  'SET_NAVBAR_CLICKED' = 'SET_NAVBAR_CLICKED',
 }
 
 type Action =
   | { type: ActionTypes.SET_TECHSTACK_OPTION; payload: ToolType }
-  | { type: ActionTypes.SET_TECHSTACK_EXPERIENCE; payload: Experience };
+  | { type: ActionTypes.SET_TECHSTACK_EXPERIENCE; payload: Experience }
+  | { type: ActionTypes.SET_NAVBAR_CLICKED; payload: boolean };
 
 export function reducer(state: State = initialState, action: Action): State {
   switch (action.type) {
@@ -34,6 +37,12 @@ export function reducer(state: State = initialState, action: Action): State {
       return {
         ...state,
         experienceOption: action.payload,
+      };
+    }
+    case ActionTypes.SET_NAVBAR_CLICKED: {
+      return {
+        ...state,
+        navBarClicked: action.payload,
       };
     }
   }
@@ -50,6 +59,7 @@ function getLocalState(): State | undefined {
     techstackOption: localState.techstackOption || initialState.techstackOption,
     experienceOption:
       localState.experienceOption || initialState.experienceOption,
+    navBarClicked: localState.navBarClicked || initialState.navBarClicked,
   };
 }
 
