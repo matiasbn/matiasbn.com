@@ -10,15 +10,16 @@ const HeroTitle = styled.p<{ color?: string }>`
   padding: 5px;
   animation: opacity-animation 2s;
 
-  @media (${breakpoints.tabletPortrait}) and (orientation: portrait) {
+  @media (${breakpoints.tablet.portrait.min}) and (orientation: portrait) {
     font-size: 80px;
   }
 
-  @media (${breakpoints.desktop}) {
+  @media (${breakpoints.desktop.portrait.min}) {
     font-size: 80px;
   }
 
-  @media (${breakpoints.smallPhonePortrait.max}) {
+  @media (${breakpoints.smallPhone.landscape
+      .max}) and (orientation: landscape) {
     font-size: 35px;
   }
 

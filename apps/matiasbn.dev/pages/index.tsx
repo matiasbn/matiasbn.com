@@ -5,8 +5,6 @@ import { saveState } from '@utils/localStorage';
 import { useSelector } from 'react-redux';
 import Hero from '@organisms/he-hero';
 
-const Wrapper = styled.div``;
-
 export default function Index() {
   const state = useSelector((state) => state);
   useEffect(() => {
@@ -15,9 +13,7 @@ export default function Index() {
 
   return (
     <Layout>
-      <Wrapper>
-        <Hero></Hero>
-      </Wrapper>
+      <Hero />
     </Layout>
   );
 }

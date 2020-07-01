@@ -2,11 +2,9 @@ import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import NavbarBrandText from '@atoms/nb-brand-text';
 import NavbarMenu from '@molecules/nb-menu';
-import NavbarButton from '@atoms/nb-button';
 import breakpoints from '@utils/breakpoints';
 import { useRouter } from 'next/router';
 import NavbarHamburgerIcon from '@atoms/nb-hamburger-icon';
-import { debuglog, log } from 'util';
 import NavbarSocial from '@molecules/nb-social';
 
 type Props = {};
@@ -16,40 +14,49 @@ const Wrapper = styled.nav`
   height: 100%;
   background: #242424;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr 9fr;
   justify-items: center;
   align-items: center;
   position: relative;
 
-  .contact-button {
-    justify-self: end;
-    margin-right: 5px;
+  @media (${breakpoints.tablet.landscape.min}) and (orientation: landscape) {
+    grid-template-columns: 1fr 9fr;
   }
 
-  @media (orientation: landscape) {
+  @media (${breakpoints.desktop.landscape.min}) {
     display: grid;
     grid-template-rows: 1fr 10fr;
-    grid-template-columns: auto;
-  }
-
-  @media (${breakpoints.tabletLandscape}) {
-  }
-
-  @media (${breakpoints.smallPhonePortrait.max}) {
+    grid-template-columns: 1fr;
+    width: 5vw;
+    height: 100vh;
   }
 `;
 
 const ContainerBrand = styled.div`
   justify-self: left;
   padding-left: 10px;
+  @media (orientation: landscape) {
+    justify-self: center;
+    align-self: center;
+    padding: 0;
+  }
 `;
 
 const ContainerHamburguer = styled.div`
   justify-self: right;
   padding-right: 10px;
-  @media (orientation: landscape) {
+
+  @media (${breakpoints.desktop.landscape.min}) {
     display: none;
   }
+`;
+
+const ContainerMenu = styled.div`
+  width: 95%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 `;
 
 export default function Navbar({}: Props) {
@@ -62,16 +69,13 @@ export default function Navbar({}: Props) {
           MB
         </NavbarBrandText>
       </ContainerBrand>
-      {/*<NavbarButton*/}
-      {/*  */}
-      {/*  type={'button'}*/}
-      {/*  className={'contact-button'}*/}
-      {/*></NavbarButton>*/}
       <ContainerHamburguer>
         <NavbarHamburgerIcon />
       </ContainerHamburguer>
-      <NavbarMenu />
-      <NavbarSocial />
+      <ContainerMenu>
+        <NavbarMenu />
+        <NavbarSocial />
+      </ContainerMenu>
     </Wrapper>
   );
 }

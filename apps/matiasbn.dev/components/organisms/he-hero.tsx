@@ -14,10 +14,10 @@ const Wrapper = styled.div`
   align-items: center;
   justify-content: space-around;
   height: 90vh;
+  width: 100%;
 
   @media (orientation: landscape) {
     height: 100vh;
-    width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-items: center;
@@ -32,6 +32,9 @@ const Wrapper = styled.div`
     justify-items: center;
     align-items: center;
   }
+
+  @media (${breakpoints.desktop.landscape.min}) {
+  }
 `;
 
 const ContainerTitle = styled.div`
@@ -42,13 +45,14 @@ const ContainerTitle = styled.div`
     margin: 0px;
   }
 
-  @media (${breakpoints.smallPhonePortrait.max}) {
+  @media (${breakpoints.smallPhone.landscape
+      .max}) and (orientation: landscape) {
     .landscape {
       font-size: 15px;
     }
   }
 
-  @media (${breakpoints.tabletPortrait}) and (orientation: portrait) {
+  @media (${breakpoints.tablet.portrait.min}) and (orientation: portrait) {
     .landscape {
       font-size: 30px;
     }

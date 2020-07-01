@@ -18,7 +18,7 @@ const Wrapper = styled.div`
   width: 80%;
   height: 100%;
   position: relative;
-  @media (${breakpoints.desktop}) {
+  @media (${breakpoints.desktop.portrait.min}) {
     display: grid;
     grid-template-columns: repeat(4, ${tabWidth});
   }

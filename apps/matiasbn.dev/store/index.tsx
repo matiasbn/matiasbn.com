@@ -25,7 +25,10 @@ type Action =
   | { type: ActionTypes.SET_TECHSTACK_EXPERIENCE; payload: Experience }
   | { type: ActionTypes.SET_NAVBAR_CLICKED; payload: boolean };
 
-export function reducer(state: State = initialState, action: Action): State {
+export function reducer(
+  state: State = getCurrentState(),
+  action: Action
+): State {
   switch (action.type) {
     case ActionTypes.SET_TECHSTACK_OPTION: {
       return {

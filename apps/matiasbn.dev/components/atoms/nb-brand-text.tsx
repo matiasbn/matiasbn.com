@@ -5,26 +5,26 @@ import breakpoints from '@utils/breakpoints';
 const NavbarBrandText = styled.a`
   margin: 0;
   text-align: center;
-  font-size: 15px;
+  font-size: 5vh;
   cursor: pointer;
+  height: 100%;
+  width: 100%;
   color: #73f9d9;
 
-  @media (${breakpoints.smallPhone}) {
-    font-size: 5px;
-  }
-
   @media (orientation: landscape) {
-    justify-self: start;
-    padding-left: 10px;
-    font-size: 2vw;
+    font-size: 5vw;
   }
 
-  @media (${breakpoints.tabletPortrait}) {
+  @media (${breakpoints.smallPhone.portrait.max}) {
     font-size: 25px;
   }
 
-  @media (${breakpoints.desktopWide}) {
-    font-size: 40px;
+  @media (${breakpoints.tablet.landscape.min}) and (orientation: portrait) {
+    font-size: 5vh;
+  }
+
+  @media (${breakpoints.desktop.landscape.min}) {
+    font-size: 2vw;
   }
 `;
 

@@ -11,7 +11,7 @@ const TechStackIcon = styled.img<{ color?: string }>`
     width: 25px;
     transition: width 0.1s ease-in;
   }
-  @media (${breakpoints.desktop}) {
+  @media (${breakpoints.desktop.portrait.min}) {
     width: 60px;
 
     &:hover {

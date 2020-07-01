@@ -20,11 +20,11 @@ const HeroSubtitle = styled.p<{ color?: string }>`
     animation-fill-mode: forwards;
   }
 
-  @media (${breakpoints.tabletPortrait}) {
+  @media (${breakpoints.tablet.portrait.min}) {
     font-size: 20px;
   }
 
-  @media (${breakpoints.desktop}) {
+  @media (${breakpoints.desktop.portrait.min}) {
     font-size: 20px;
   }
   @keyframes opacity-animation {
