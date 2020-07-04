@@ -36,6 +36,8 @@ const Wrapper = styled.div<{ clicked?: boolean; elements?: number }>`
     background: initial;
     position: initial;
     padding: initial;
+    height: initial;
+    opacity: initial;
   }
 `;
 

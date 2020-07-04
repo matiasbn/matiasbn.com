@@ -33,6 +33,27 @@ const ContainerBrand = styled.div`
   align-items: center;
   padding-left: 1rem;
   justify-self: left;
+
+  @media (${breakpoints.desktop.min}) {
+    padding: 0;
+    align-items: center;
+    justify-items: center;
+    justify-self: center;
+  }
+`;
+
+const ContainerMenu = styled.div`
+  width: 95%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  @media (${breakpoints.desktop.min}) {
+    height: 100%;
+    width: 100%;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
 `;
 
 const ContainerHamburguer = styled.div`
@@ -45,14 +66,6 @@ const ContainerHamburguer = styled.div`
   @media (${breakpoints.desktop.min}) {
     display: none;
   }
-`;
-
-const ContainerMenu = styled.div`
-  width: 95%;
-  height: 90%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
 `;
 
 export default function Navbar({}: Props) {

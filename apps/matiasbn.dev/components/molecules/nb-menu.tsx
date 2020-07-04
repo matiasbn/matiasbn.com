@@ -34,7 +34,7 @@ const Wrapper = styled.div<{ clicked?: boolean; elements?: number }>`
     grid-template-columns: 1fr;
     height: 100%;
 
-    a:nth-child(5) {
+    a:nth-child(4) {
       display: none;
     }
   }

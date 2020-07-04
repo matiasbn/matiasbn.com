@@ -9,20 +9,21 @@ type Props = {};
 const Wrapper = styled.div`
   background: #282828;
   display: grid;
-  grid-template-rows: 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
   align-items: center;
   justify-items: center;
   height: auto;
   width: 100%;
-
-  @media (${breakpoints.desktop.min}) {
-  }
 `;
 
 const ContainerText = styled.div`
-  height: 100%;
+  height: auto;
   align-self: start;
   padding-top: 8rem;
+  @media (${breakpoints.desktop.min}) {
+    //padding-top: 0;
+    align-self: start;
+  }
 `;
 
 export default function Hero({}: Props) {

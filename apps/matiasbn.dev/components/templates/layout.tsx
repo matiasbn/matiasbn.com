@@ -4,13 +4,14 @@ import Navbar from '@organisms/nb-navbar';
 import breakpoints from '@utils/breakpoints';
 
 const Wrapper = styled.div`
+  height: 100%;
   display: grid;
   grid-template-rows: 10vh 90vh;
   grid-template-columns: 1fr;
 
   @media (${breakpoints.desktop.min}) {
-    grid-template-columns: 5vw 95vw;
-    grid-auto-rows: 1fr;
+    grid-template-columns: 7vw 93vw;
+    grid-template-rows: 100vh;
   }
 `;
 
@@ -24,7 +25,7 @@ const Layout = (props: { children: ReactNode }) => {
   return (
     <Wrapper>
       <Navbar />
-      {/*<Container>{props.children}</Container>*/}
+      <Container>{props.children}</Container>
     </Wrapper>
   );
 };
