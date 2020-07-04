@@ -3,19 +3,19 @@ import styled from 'styled-components';
 import NavbarSocialIcon from '@atoms/nb-social-icon';
 import breakpoints from '@utils/breakpoints';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
+import { faEnvelope, faFileAlt } from '@fortawesome/free-regular-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useSelector } from 'react-redux';
 import { MenuOptions } from '@utils/enums';
 
 interface Props extends AllHTMLAttributes<{}> {}
 
-const Wrapper = styled.div<{ clicked?: boolean }>`
+const Wrapper = styled.div<{ clicked?: boolean; elements?: number }>`
   box-sizing: border-box;
   position: fixed;
   top: 18vh;
   right: 0vw;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(${(props) => props.elements}, 1fr);
   align-items: center;
   justify-items: center;
   height: auto;
@@ -24,7 +24,7 @@ const Wrapper = styled.div<{ clicked?: boolean }>`
   background: #222222;
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
-  width: ${(props) => (props.clicked ? '150px' : '0')};
+  width: ${(props) => (props.clicked ? '200px' : '0')};
   display: grid;
   opacity: ${(props) => (props.clicked ? 'initial' : '0')};
   transition: 0.5s;
@@ -52,8 +52,9 @@ const icons = [
     url: 'mailto:matias.barriosn@gmail.com?subject=Hello Matías!',
   },
   {
-    icon: faEnvelope,
-    url: 'mailto:matias.barriosn@gmail.com?subject=Hello Matías!',
+    icon: faFileAlt,
+    url:
+      'https://drive.google.com/file/d/13QalMyoGVsxsAIaqyIpHZbebARirfA4L/view?usp=sharing',
   },
 ];
 
@@ -62,7 +63,7 @@ export default function NavbarSocial(props: Props) {
   const clicked = useSelector((state) => state.navBarClicked);
   const show = menuOption === MenuOptions.CONTACT && clicked;
   return (
-    <Wrapper clicked={show}>
+    <Wrapper clicked={show} elements={icons.length}>
       {icons.map((icon) => (
         <NavbarSocialIcon href={icon?.url}>
           <FontAwesomeIcon icon={icon.icon} />
