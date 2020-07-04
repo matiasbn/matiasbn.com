@@ -10,15 +10,14 @@ interface Props extends AllHTMLAttributes<{}> {}
 
 const Wrapper = styled.nav`
   display: grid;
-  grid-template-columns: repeat(10, 8vw);
+  grid-template-columns: repeat(10, 8rem);
   justify-items: center;
   align-items: center;
   width: 80%;
   height: 100%;
   position: relative;
-  @media (${breakpoints.desktop.portrait.min}) {
+  @media (${breakpoints.desktop.min}) {
     display: grid;
-    grid-template-columns: repeat(10, 8vw);
   }
 `;
 
@@ -26,11 +25,11 @@ const NavBarSelector = styled.div<{ indexSelector?: number }>`
   transition: all 0.5s ease;
   position: absolute;
   display: grid;
-  grid-template-columns: 8vw;
+  grid-template-columns: 8rem;
   border-top-left-radius: 1em 1em;
   border-top-right-radius: 1em 1em;
   background: #282828;
-  left: ${(props) => (props.indexSelector ? props.indexSelector * 8 : 0)}vw;
+  left: ${(props) => (props.indexSelector ? props.indexSelector * 8 : 0)}rem;
   height: 100%;
   color: white;
   z-index: 0;

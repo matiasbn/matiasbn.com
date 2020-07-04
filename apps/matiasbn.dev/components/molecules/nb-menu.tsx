@@ -19,17 +19,18 @@ const Wrapper = styled.div<{ clicked?: boolean; elements?: number }>`
   display: grid;
   grid-template-columns: repeat(${(props) => props.elements}, 1fr);
   background: #262626;
-  height: 10vh;
+  height: 7rem;
+  top: 10vh;
   width: 100%;
-  top: 8vh;
-  right: ${(props) => (props.clicked ? '0' : '1000px')};
-  transition: 0.5s;
+  right: ${(props) => (props.clicked ? '0' : '100%')};
+  transition-duration: 1s;
+  transition-timing-function: cubic-bezier();
 
-  @media (${breakpoints.desktop.landscape.min}) {
+  @media (${breakpoints.desktop.min}) {
     position: initial;
     display: grid;
     grid-template-rows: repeat(${(props) => props.elements - 1}, 6vh);
-    gap: 20px;
+    gap: 2rem;
     grid-template-columns: 1fr;
     height: 100%;
 

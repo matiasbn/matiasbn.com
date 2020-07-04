@@ -10,6 +10,8 @@ import { MenuOptions } from '@utils/enums';
 const initialState = {
   techstackOption: ToolType.ALL,
   experienceOption: Experience.ALL,
+  //  navBarClicked: false,
+  //  menuOption: MenuOptions.NONE,
   navBarClicked: true,
   menuOption: MenuOptions.CONTACT,
 };

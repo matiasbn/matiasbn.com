@@ -18,32 +18,32 @@ const Container = styled.div<{ toolsAmount: number }>`
   display: grid;
   grid-template-columns: repeat(
     ${(props) => columnCalculator(props.toolsAmount)},
-    minmax(25px, auto)
+    minmax(25rem, auto)
   );
-  grid-auto-rows: 50px;
+  grid-auto-rows: 50rem;
   justify-items: center;
   align-items: center;
   border-color: #eee9ed;
   border-style: solid;
-  border-radius: 10px;
-  margin: 10px;
+  border-radius: 10rem;
+  margin: 10rem;
 
-  @media (${breakpoints.desktop.portrait.min}) {
+  @media (${breakpoints.desktop.min}) {
     grid-template-columns: repeat(
       ${(props) => columnCalculator(props.toolsAmount)},
-      minmax(70px, auto)
+      minmax(70rem, auto)
     );
-    grid-auto-rows: 90px;
-    border-width: 1px;
-    padding: 12px;
-    margin: 20px;
+    grid-auto-rows: 90rem;
+    border-width: 1rem;
+    padding: 12rem;
+    margin: 20rem;
   }
 `;
 
 const Wrapper = styled.div`
   width: 85%;
   background: #282828;
-  border-radius: 10px;
+  border-radius: 10rem;
 `;
 
 export default function TechStackGallery(props: Props) {

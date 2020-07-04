@@ -6,16 +6,16 @@ const TechStackIcon = styled.img<{ color?: string }>`
   margin: 0;
   color: ${(props) => (props.color ? props.color : 'white')};
   transition: width 0.1s ease-out;
-  width: 25px;
+  width: 25rem;
   &:hover {
-    width: 25px;
+    width: 25rem;
     transition: width 0.1s ease-in;
   }
-  @media (${breakpoints.desktop.portrait.min}) {
-    width: 60px;
+  @media (${breakpoints.desktop.min}) {
+    width: 60rem;
 
     &:hover {
-      width: 70px;
+      width: 70rem;
       transition: width 0.1s ease-in;
     }
   }

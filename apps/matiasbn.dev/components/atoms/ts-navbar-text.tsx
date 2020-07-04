@@ -5,7 +5,7 @@ const TechStackNavbarText = styled.a<{ active?: boolean }>`
   margin: 0;
   color: ${(props) => (props.active ? 'white' : '#282828')};
   text-align: center;
-  font-size: 1.2vw;
+  font-size: 1.2rem;
   width: 100%;
   height: 100%;
   border-top-left-radius: 1em 1em;

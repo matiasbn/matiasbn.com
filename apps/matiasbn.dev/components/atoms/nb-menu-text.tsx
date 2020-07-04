@@ -10,40 +10,24 @@ const NavbarMenuText = styled.a`
   cursor: pointer;
   color: white;
   text-decoration: none;
-  font-size: 35px;
+  font-size: 3rem;
 
   img {
-    width: 6vh;
+    width: 6rem;
   }
 
   p {
     margin: 0;
-    font-size: 15px;
+    font-size: 1.5rem;
     color: #73f9d9;
   }
 
-  @media (${breakpoints.tablet.portrait.min}) and (orientation: portrait) {
-    font-size: 20px;
-    p {
-      font-size: 3vh;
-    }
-  }
-
-  @media (${breakpoints.tablet.landscape.min}) and (orientation: landscape) {
+  @media (${breakpoints.desktop.min}) {
     img {
-      width: 5vw;
+      width: 3rem;
     }
     p {
-      font-size: 2vw;
-    }
-  }
-
-  @media (${breakpoints.desktop.landscape.min}) {
-    img {
-      width: 3vw;
-    }
-    p {
-      font-size: 2vh;
+      font-size: 2rem;
       text-align: center;
     }
   }

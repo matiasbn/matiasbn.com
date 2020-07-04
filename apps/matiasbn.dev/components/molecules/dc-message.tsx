@@ -14,17 +14,13 @@ const Wrapper = styled.div`
     align-items: center;
     justify-items: center;
     grid-template-columns: auto max-content auto;
-    grid-column-gap: 10px;
+    grid-column-gap: 10rem;
   }
   .portrait {
     justify-self: end;
   }
   .landscape {
     justify-self: start;
-  }
-
-  @media (orientation: landscape) {
-    display: none;
   }
 `;
 
@@ -34,10 +30,10 @@ export default function DisclaimerMessage(props: Props) {
       <DisclaimerTitle>Please use landscape orientation</DisclaimerTitle>
       <div className={'subtitle'}>
         <DisclaimerSubtitle className={'portrait'}>📱️</DisclaimerSubtitle>
-        <DisclaimerSubtitle className={'arrow'} fontSize={'20px'}>
+        <DisclaimerSubtitle className={'arrow'} fontSize={'20rem'}>
           ➡️
         </DisclaimerSubtitle>
-        <DisclaimerSubtitle className={'landscape'} rotate fontSize={'50px'}>
+        <DisclaimerSubtitle className={'landscape'} rotate fontSize={'50rem'}>
           📱️
         </DisclaimerSubtitle>
       </div>

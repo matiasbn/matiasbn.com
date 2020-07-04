@@ -11,11 +11,8 @@ const Wrapper = styled.div`
   justify-items: center;
   align-items: center;
   grid-auto-rows: auto;
-  grid-row-gap: 10px;
-  margin-bottom: 20px;
-  @media (orientation: portrait) {
-    display: none;
-  }
+  grid-row-gap: 10rem;
+  margin-bottom: 20rem;
 `;
 const ContainerGallery = styled.div`
   width: 100%;

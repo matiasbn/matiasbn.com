@@ -6,13 +6,13 @@ import FooterIcon from '@atoms/tf-icon';
 interface Props extends AllHTMLAttributes<{}> {}
 
 const Wrapper = styled.div`
-  border-top: 1px solid #6e6e6e;
-  padding-top: 10px;
-  padding-bottom: 30px;
+  border-top: 1rem solid #6e6e6e;
+  padding-top: 10rem;
+  padding-bottom: 30rem;
   background: white;
   display: grid;
   grid-auto-rows: auto;
-  grid-row-gap: 5px;
+  grid-row-gap: 5rem;
   align-items: center;
   justify-items: center;
 `;
@@ -23,14 +23,6 @@ const ContainerIcons = styled.div`
   align-items: center;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   width: 50%;
-
-  @media (min-width: 60rem) {
-    width: 30%;
-  }
-
-  @media (orientation: landscape) {
-    width: 20%;
-  }
 `;
 
 export default function Footer({}: Props) {

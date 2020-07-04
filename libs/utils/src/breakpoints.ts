@@ -9,16 +9,6 @@ export const breakpoints = {
       max: 'max-height: 321px',
     },
   },
-  phone: {
-    portrait: {
-      min: 'min-width: 375px',
-      max: 'max-width: 414px',
-    },
-    landscape: {
-      min: 'min-height: 374px',
-      max: 'max-height: 414px',
-    },
-  },
   tablet: {
     portrait: {
       min: 'min-width: 768px',
@@ -30,19 +20,13 @@ export const breakpoints = {
     },
   },
   desktop: {
-    portrait: {
-      min: 'min-width: 1280px',
-      max: 'max-width: 2560px',
-    },
-    landscape: {
-      min: 'min-width: 1024px',
-      max: 'max-width: 2560px',
-    },
+    min: 'min-width: 1280px',
+    max: 'max-width: 2560px',
   },
 };
 
 export const isDesktop = () => {
-  return window.matchMedia(`(${breakpoints.desktop.portrait.min})`).matches;
+  return window.matchMedia(`(${breakpoints.desktop.min})`).matches;
 };
 
 export default breakpoints;

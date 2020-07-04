@@ -4,42 +4,43 @@ import { useSelector, useDispatch } from 'react-redux';
 import { ActionTypes } from '@store';
 
 const Wrapper = styled.div<{ clicked?: boolean }>`
+  height: fit-content;
   .container {
     display: inline-block;
     cursor: pointer;
   }
 
   .bar1 {
-    width: 35px;
-    height: 5px;
+    width: 3.5rem;
+    height: 0.5rem;
     background-color: #73f9d9;
-    margin: 6px 0;
+    margin: 0 0 0.6rem 0;
     transition: 0.4s;
     -webkit-transform: ${(props) =>
-      props.clicked ? 'rotate(-45deg) translate(-9px, 6px)' : ''};
+      props.clicked ? 'rotate(-45deg) translate(-0.9rem, 0.6rem)' : ''};
     transform: ${(props) =>
-      props.clicked ? 'rotate(-45deg) translate(-9px, 6px)' : ''};
+      props.clicked ? 'rotate(-45deg) translate(-0.9rem, 0.6rem)' : ''};
   }
 
   .bar2 {
-    width: 35px;
-    height: 5px;
+    width: 3.5rem;
+    height: 0.5rem;
     background-color: #73f9d9;
-    margin: 6px 0;
+    margin: 0.6rem 0;
     transition: 0.4s;
     opacity: ${(props) => (props.clicked ? 0 : 1)};
   }
 
   .bar3 {
-    width: 35px;
-    height: 5px;
+    width: 3.5rem;
+    height: 0.5rem;
     background-color: #73f9d9;
-    margin: 6px 0;
+    margin: 0.66rem 0 0 0;
     transition: 0.4s;
     -webkit-transform: ${(props) =>
-      props.clicked ? ' rotate(45deg) translate(-8px, -8px)' : ''};
+      props.clicked ? ' rotate(45deg) translate(-0.8rem, -0.8rem)' : ''};
     transform: ${(props) =>
-      props.clicked ? ' rotate(45deg) translate(-8px, -8px)' : ''};
+      props.clicked ? ' rotate(45deg) translate(-0.8rem, -0.8rem)' : ''};
   }
 `;
 

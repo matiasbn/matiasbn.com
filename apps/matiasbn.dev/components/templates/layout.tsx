@@ -8,8 +8,8 @@ const Wrapper = styled.div`
   grid-template-rows: 10vh 90vh;
   grid-template-columns: 1fr;
 
-  @media (${breakpoints.desktop.landscape.min}) {
-    grid-template-columns: min-content auto;
+  @media (${breakpoints.desktop.min}) {
+    grid-template-columns: 5vw 95vw;
     grid-auto-rows: 1fr;
   }
 `;
@@ -24,7 +24,7 @@ const Layout = (props: { children: ReactNode }) => {
   return (
     <Wrapper>
       <Navbar />
-      <Container>{props.children}</Container>
+      {/*<Container>{props.children}</Container>*/}
     </Wrapper>
   );
 };

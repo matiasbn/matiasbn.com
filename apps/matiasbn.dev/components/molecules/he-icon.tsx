@@ -1,15 +1,15 @@
 import React, { AllHTMLAttributes } from 'react';
 import styled from 'styled-components';
-import ResumeHero from '@molecules/re-hero';
+import HeroIconText from '@atoms/he-icon-text';
 
 interface Props extends AllHTMLAttributes<{}> {}
 
 const Wrapper = styled.div``;
 
-export default function Resume(props: Props) {
+export default function HeroIcon(props: Props) {
   return (
     <Wrapper>
-      <ResumeHero></ResumeHero>
+      <HeroIconText>{'</>'}</HeroIconText>
     </Wrapper>
   );
 }

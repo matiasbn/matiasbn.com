@@ -9,44 +9,40 @@ import NavbarSocial from '@molecules/nb-social';
 
 type Props = {};
 
-const Wrapper = styled.nav`
+const Wrapper = styled.div`
   width: 100%;
   height: 100%;
   background: #242424;
   display: grid;
-  grid-template-columns: 1fr 9fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
   justify-items: center;
   align-items: center;
   position: relative;
 
-  @media (${breakpoints.tablet.landscape.min}) and (orientation: landscape) {
-    grid-template-columns: 1fr 9fr;
-  }
-
-  @media (${breakpoints.desktop.landscape.min}) {
+  @media (${breakpoints.desktop.min}) {
     display: grid;
     grid-template-rows: 1fr 10fr;
     grid-template-columns: 1fr;
-    width: 5vw;
-    height: 100vh;
   }
 `;
 
 const ContainerBrand = styled.div`
+  height: 100%;
+  display: grid;
+  align-items: center;
+  padding-left: 1rem;
   justify-self: left;
-  padding-left: 10px;
-  @media (orientation: landscape) {
-    justify-self: center;
-    align-self: center;
-    padding: 0;
-  }
 `;
 
 const ContainerHamburguer = styled.div`
+  height: 100%;
+  display: grid;
   justify-self: right;
-  padding-right: 10px;
+  align-items: center;
+  padding-right: 1rem;
 
-  @media (${breakpoints.desktop.landscape.min}) {
+  @media (${breakpoints.desktop.min}) {
     display: none;
   }
 `;

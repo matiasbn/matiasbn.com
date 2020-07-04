@@ -8,7 +8,7 @@ import breakpoints from '@utils/breakpoints';
 
 interface Props extends AllHTMLAttributes<{}> {}
 
-const tabWidth = '20vw';
+const tabWidth = '20rem';
 
 const Wrapper = styled.div`
   display: grid;
@@ -18,7 +18,7 @@ const Wrapper = styled.div`
   width: 80%;
   height: 100%;
   position: relative;
-  @media (${breakpoints.desktop.portrait.min}) {
+  @media (${breakpoints.desktop.min}) {
     display: grid;
     grid-template-columns: repeat(4, ${tabWidth});
   }
@@ -32,7 +32,7 @@ const NavBarSelector = styled.div<{ indexSelector?: number }>`
   border-bottom-left-radius: 1em 1em;
   border-bottom-right-radius: 1em 1em;
   background: #282828;
-  left: ${(props) => (props.indexSelector ? props.indexSelector * 20 : 0)}vw;
+  left: ${(props) => (props.indexSelector ? props.indexSelector * 20 : 0)}rem;
   height: 100%;
   color: white;
   z-index: 0;

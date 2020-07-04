@@ -9,7 +9,7 @@ const DisclaimerSubtitle = styled.h1<{
   margin: 0;
   color: ${(props) => (props.color ? props.color : 'grey')};
   transform: rotate(${(props) => (props.rotate ? '90deg' : '0deg')});
-  font-size: ${(props) => (props.fontSize ? props.fontSize : '40px')};
+  font-size: ${(props) => (props.fontSize ? props.fontSize : '40rem')};
 `;
 
 export default DisclaimerSubtitle;

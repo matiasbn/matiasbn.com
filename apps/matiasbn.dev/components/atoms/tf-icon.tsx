@@ -3,15 +3,7 @@ import styled from 'styled-components';
 
 const Icon = styled.img<{ color?: string }>`
   color: ${(props) => (props.color ? props.color : 'white')};
-  width: 10vw;
-
-  @media (min-width: 60rem) {
-    width: 80px;
-  }
-
-  @media (orientation: landscape) {
-    width: 4vw;
-  }
+  width: 10rem;
 `;
 
 const Anchor = styled.a``;
