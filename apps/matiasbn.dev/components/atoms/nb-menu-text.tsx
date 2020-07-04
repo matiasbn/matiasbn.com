@@ -9,8 +9,8 @@ const NavbarMenuText = styled.a`
   font-family: 'Comfortaa', cursive;
   cursor: pointer;
   color: white;
-  font-size: 10px;
   text-decoration: none;
+  font-size: 35px;
 
   img {
     width: 6vh;
@@ -18,29 +18,8 @@ const NavbarMenuText = styled.a`
 
   p {
     margin: 0;
-    font-size: 10px;
+    font-size: 15px;
     color: #73f9d9;
-  }
-  @media (orientation: landscape) {
-    img {
-      width: 8vh;
-    }
-
-    p {
-      margin: 0;
-      font-size: 15px;
-      color: #73f9d9;
-    }
-  }
-
-  @media (${breakpoints.smallPhone.landscape
-      .max}) and (orientation: landscape) {
-    img {
-      width: 5vw;
-    }
-    p {
-      font-size: 3vw;
-    }
   }
 
   @media (${breakpoints.tablet.portrait.min}) and (orientation: portrait) {

@@ -1,12 +1,4 @@
 {
   "presets": ["next/babel"],
-  "plugins": [
-    ["styled-components", { "pure": true, "ssr": true }],
-    [
-      "import-static-files",
-      {
-        "baseDir": "./public"
-      }
-    ]
-  ]
+  "plugins": [["styled-components", { "pure": true, "ssr": true }]]
 }

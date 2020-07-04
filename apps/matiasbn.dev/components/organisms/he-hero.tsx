@@ -13,7 +13,7 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  height: 90vh;
+  height: auto;
   width: 100%;
 
   @media (orientation: landscape) {
@@ -38,6 +38,8 @@ const Wrapper = styled.div`
 `;
 
 const ContainerTitle = styled.div`
+  box-sizing: border-box;
+  padding-top: 80px;
   .landscape {
     font-size: 20px;
   }

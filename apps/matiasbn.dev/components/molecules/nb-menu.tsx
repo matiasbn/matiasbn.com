@@ -1,9 +1,18 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import NavbarMenuText from '@atoms/nb-menu-text';
 import breakpoints from '@utils/breakpoints';
 import { useRouter } from 'next/router';
 import { useSelector, useDispatch } from 'react-redux';
+import {
+  faUser,
+  faKeyboard,
+  faFileCode,
+  faComment,
+} from '@fortawesome/free-regular-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { ActionTypes } from '@store';
+import { MenuOptions } from '@utils/enums';
 
 const Wrapper = styled.div<{ clicked?: boolean; elements?: number }>`
   position: absolute;
@@ -12,26 +21,9 @@ const Wrapper = styled.div<{ clicked?: boolean; elements?: number }>`
   background: #262626;
   height: 10vh;
   width: 100%;
-  top: 10vh;
+  top: 8vh;
   right: ${(props) => (props.clicked ? '0' : '1000px')};
   transition: 0.5s;
-
-  @media (orientation: landscape) {
-    top: 16vh;
-  }
-
-  @media (${breakpoints.smallPhone.landscape
-      .max}) and (orientation: landscape) {
-    top: 19vh;
-  }
-
-  @media (${breakpoints.tablet.landscape.min}) and (orientation: landscape) {
-    top: 10vh;
-  }
-
-  @media (${breakpoints.tablet.portrait.min}) and (orientation: portrait) {
-    top: 9vh;
-  }
 
   @media (${breakpoints.desktop.landscape.min}) {
     position: initial;
@@ -49,33 +41,30 @@ const Wrapper = styled.div<{ clicked?: boolean; elements?: number }>`
 
 const options = [
   {
-    icon: 'person.svg',
+    icon: faUser,
     title: 'About me',
     route: '/#',
+    option: MenuOptions.ABOUT,
     //    route: '/techstack',
   },
   {
-    icon: 'glasses.svg',
+    icon: faFileCode,
     title: 'Skills',
     route: '/#',
+    option: MenuOptions.SKILLS,
     //    route: '/techstack',
   },
   {
-    icon: 'gear.svg',
-    title: 'Tech',
+    icon: faKeyboard,
+    title: 'Tools',
     route: '/#',
+    option: MenuOptions.TECH,
     //    route: '/techstack',
   },
   {
-    icon: 'document.svg',
-    title: 'Resume',
-    route: '/#',
-    //    route: '/resume',
-  },
-  {
-    icon: 'mail.svg',
-    title: 'Contact',
-    subtitle: "Let's Talk!",
+    icon: faComment,
+    title: "Let's talk!",
+    option: MenuOptions.CONTACT,
     route: '/#',
     //    route: '/resume',
   },
@@ -88,21 +77,25 @@ type Options = typeof options[0];
 export default function NavbarMenu({}: Props) {
   const router = useRouter();
   const clicked = useSelector((state) => state.navBarClicked);
-  const [selected, setSelected] = useState(null);
+  const selected = useSelector((state) => state.menuOption);
 
-  function handleClick(option: Options) {
-    const { route, title } = option;
-    setSelected(title);
+  const dispatch = useDispatch();
+  function handleClick(opt: Options) {
+    const { route, option } = opt;
+    dispatch({
+      type: ActionTypes.SET_MENU_OPTION,
+      payload: option === selected ? MenuOptions.NONE : option,
+    });
     //    router.push(route);
   }
   return (
     <Wrapper clicked={clicked} elements={options.length}>
       {options.map((option) => (
         <NavbarMenuText key={option.title} onClick={() => handleClick(option)}>
-          {selected === option.title ? (
+          {selected === option.option ? (
             <p>{option.title}</p>
           ) : (
-            <img src={option.icon} title={option.title} />
+            <FontAwesomeIcon icon={option.icon} />
           )}
         </NavbarMenuText>
       ))}

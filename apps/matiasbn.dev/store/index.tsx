@@ -1,15 +1,17 @@
 /* eslint-disable indent */
 import React, { ReactNode } from 'react';
 import { loadState } from '@utils/localStorage';
-import { ToolType, Experience } from '@utils/tools';
+import { Experience, ToolType } from '@utils/tools';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
+import { MenuOptions } from '@utils/enums';
 
 const initialState = {
   techstackOption: ToolType.ALL,
   experienceOption: Experience.ALL,
-  navBarClicked: false,
+  navBarClicked: true,
+  menuOption: MenuOptions.CONTACT,
 };
 
 type State = typeof initialState;
@@ -18,12 +20,14 @@ export enum ActionTypes {
   'SET_TECHSTACK_OPTION' = 'SET_TECHSTACK_OPTION',
   'SET_TECHSTACK_EXPERIENCE' = 'SET_TECHSTACK_EXPERIENCE',
   'SET_NAVBAR_CLICKED' = 'SET_NAVBAR_CLICKED',
+  'SET_MENU_OPTION' = 'SET_MENU_OPTION',
 }
 
 type Action =
   | { type: ActionTypes.SET_TECHSTACK_OPTION; payload: ToolType }
   | { type: ActionTypes.SET_TECHSTACK_EXPERIENCE; payload: Experience }
-  | { type: ActionTypes.SET_NAVBAR_CLICKED; payload: boolean };
+  | { type: ActionTypes.SET_NAVBAR_CLICKED; payload: boolean }
+  | { type: ActionTypes.SET_MENU_OPTION; payload: MenuOptions };
 
 export function reducer(
   state: State = getCurrentState(),
@@ -46,6 +50,13 @@ export function reducer(
       return {
         ...state,
         navBarClicked: action.payload,
+        menuOption: action.payload === false && MenuOptions.NONE,
+      };
+    }
+    case ActionTypes.SET_MENU_OPTION: {
+      return {
+        ...state,
+        menuOption: action.payload,
       };
     }
   }
@@ -63,6 +74,7 @@ function getLocalState(): State | undefined {
     experienceOption:
       localState.experienceOption || initialState.experienceOption,
     navBarClicked: localState.navBarClicked || initialState.navBarClicked,
+    menuOption: localState.menuOption || initialState.menuOption,
   };
 }
 

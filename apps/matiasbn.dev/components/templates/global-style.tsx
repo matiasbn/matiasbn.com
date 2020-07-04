@@ -3,9 +3,8 @@ import { createGlobalStyle } from 'styled-components';
 export default createGlobalStyle`
     body{
         position: relative;
-        margin: 0 auto;
-        padding: 0px;
+        margin: 0;
+        padding: 0;
         font-family: 'MuseoModerno';
-        width: 100vw;
     }
 `;

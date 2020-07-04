@@ -5,8 +5,7 @@ import breakpoints from '@utils/breakpoints';
 
 const Wrapper = styled.div`
   display: grid;
-  height: 100vh;
-  grid-template-rows: repeat(2, auto);
+  grid-template-rows: 10vh 90vh;
   grid-template-columns: 1fr;
 
   @media (${breakpoints.desktop.landscape.min}) {
@@ -16,7 +15,9 @@ const Wrapper = styled.div`
 `;
 
 const Container = styled.div`
+  display: grid;
   width: 100%;
+  height: 100%;
 `;
 
 const Layout = (props: { children: ReactNode }) => {
