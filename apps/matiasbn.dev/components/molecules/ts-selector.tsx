@@ -7,7 +7,14 @@ import { useDispatch } from 'react-redux';
 
 interface Props extends AllHTMLAttributes<{}> {}
 
-const Wrapper = styled.div``;
+const Wrapper = styled.div`
+  margin: 5rem;
+  display: grid;
+  grid-template-columns: min-content min-content;
+  align-content: space-around;
+  justify-content: space-around;
+  width: 100%;
+`;
 
 const ContainerType = styled.select``;
 
@@ -43,14 +50,16 @@ export default function TechStackSelector(props: Props) {
       <ContainerType onChange={handleToolChange}>
         {Object.keys(ToolType).map((tool) => (
           <TechStackSelectorList key={tool} value={tool}>
-            {capitalizeFirst(tool)}
+            {tool === ToolType.CICD || tool === ToolType.OS
+              ? tool
+              : tool.charAt(0).toUpperCase() + tool.slice(1).toLowerCase()}
           </TechStackSelectorList>
         ))}
       </ContainerType>
       <ContainerExperience onChange={handleExpChange}>
         {Object.keys(Experience).map((exp) => (
           <TechStackSelectorList key={exp} value={exp}>
-            {capitalizeFirst(exp)}
+            {exp.charAt(0).toUpperCase() + exp.slice(1).toLowerCase()}
           </TechStackSelectorList>
         ))}
       </ContainerExperience>

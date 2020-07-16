@@ -8,7 +8,7 @@ import breakpoints from '@utils/breakpoints';
 interface Props extends AllHTMLAttributes<{}> {}
 
 const columnCalculator = (toolsAmount) => {
-  let i = 6;
+  let i = 12;
   while (toolsAmount % i !== 0) i -= 1;
   return i;
 };
@@ -24,7 +24,7 @@ const Container = styled.div<{ toolsAmount: number }>`
   display: grid;
   grid-template-columns: repeat(
     ${(props) => columnCalculator(props.toolsAmount)},
-    minmax(2rem, auto)
+    1fr
   );
   grid-auto-rows: 3rem;
   justify-items: center;

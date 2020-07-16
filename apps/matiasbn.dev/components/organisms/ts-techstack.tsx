@@ -12,13 +12,13 @@ const Wrapper = styled.div`
   justify-items: center;
   align-items: center;
   grid-template-rows: 2fr 9fr;
-  grid-row-gap: 1rem;
   margin-bottom: 2rem;
 `;
 const ContainerGallery = styled.div`
   display: grid;
   justify-items: center;
   align-items: center;
+  grid-template-rows: min-content min-content;
   width: 100%;
   height: 100%;
 `;
