@@ -11,16 +11,15 @@ const Wrapper = styled.div`
   display: grid;
   justify-items: center;
   align-items: center;
-  grid-template-rows: 2fr 9fr;
-  margin-bottom: 2rem;
+  grid-auto-rows: auto auto;
+  margin-bottom: 5rem;
 `;
 const ContainerGallery = styled.div`
   display: grid;
   justify-items: center;
   align-items: center;
-  grid-template-rows: min-content min-content;
+  grid-template-rows: auto auto;
   width: 100%;
-  height: 100%;
 `;
 
 export default function TechStack(props: Props) {

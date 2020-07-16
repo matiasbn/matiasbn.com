@@ -2,6 +2,7 @@ import React, { ReactNode } from 'react';
 import styled from 'styled-components';
 import Navbar from '@organisms/nb-navbar';
 import breakpoints from '@utils/breakpoints';
+import Animation from '@organisms/an-animation';
 
 const Wrapper = styled.div`
   height: 100%;
@@ -23,10 +24,12 @@ const Container = styled.div`
 
 const Layout = (props: { children: ReactNode }) => {
   return (
-    <Wrapper>
-      <Navbar />
-      <Container>{props.children}</Container>
-    </Wrapper>
+    <Animation>
+      <Wrapper>
+        <Navbar />
+        <Container>{props.children}</Container>
+      </Wrapper>
+    </Animation>
   );
 };
 

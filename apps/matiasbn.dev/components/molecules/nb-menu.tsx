@@ -24,7 +24,7 @@ const Wrapper = styled.div<{ clicked?: boolean; elements?: number }>`
   top: 10vh;
   width: 100%;
   right: ${(props) => (props.clicked ? '0' : '100%')};
-  transition-duration: 1s;
+  transition-duration: 0.5s;
   transition-timing-function: cubic-bezier();
 
   @media (${breakpoints.desktop.min}) {
@@ -90,7 +90,11 @@ export default function NavbarMenu({}: Props) {
       type: ActionTypes.SET_MENU_OPTION,
       payload: option === selected ? MenuOptions.NONE : option,
     });
-    router.push(route);
+
+    setTimeout(() => {
+      router.push(route);
+    }, 500);
+    setHovered(option);
   }
 
   return (

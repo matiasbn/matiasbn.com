@@ -7,11 +7,12 @@ interface Props extends AllHTMLAttributes<{}> {}
 
 const Wrapper = styled.div`
   display: grid;
-  grid-auto-rows: minmax(min-content, max-content);
+  grid-auto-rows: min-content;
   text-align: center;
   align-items: center;
   justify-items: center;
   padding: 3rem;
+  padding-top: 7rem;
   background: #282828;
   width: 100%;
   height: 100%;
