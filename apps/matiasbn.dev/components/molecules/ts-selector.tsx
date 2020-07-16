@@ -14,7 +14,6 @@ import breakpoints from '@utils/breakpoints';
 interface Props extends AllHTMLAttributes<{}> {}
 
 const Wrapper = styled.div`
-  margin: 5rem;
   display: grid;
   grid-template-columns: min-content min-content;
   align-content: space-around;
@@ -23,7 +22,7 @@ const Wrapper = styled.div`
 `;
 
 const ContainerSelect = styled.select`
-  height: 2rem;
+  height: 3rem;
   padding: 0 25px 0 10px;
   border-radius: 4px;
   border: solid 1px #e0e0e0;
@@ -36,7 +35,7 @@ const ContainerSelect = styled.select`
   -webkit-border-radius: 0px;
   appearance: none;
   outline-width: 0;
-  font-size: 1rem;
+  font-size: 2rem;
   overflow: hidden;
   text-overflow: ellipsis;
   @media (${breakpoints.desktop.min}) {

@@ -23,7 +23,7 @@ export default function TechStackIntro(props: Props) {
     <Wrapper>
       <TechStackIntroTitle>This is my 🧰</TechStackIntroTitle>
       <TechStackIntroSubttile>
-        Here I try to collect all the tools that I have used throughout my
+        Here i try to collect all the tools that I have used throughout my
         career.
       </TechStackIntroSubttile>
     </Wrapper>
