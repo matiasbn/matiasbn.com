@@ -1,38 +1,26 @@
 export const breakpoints = {
   smallPhone: {
-    min: 'min-width: 0',
-    max: 'max-width: 320px',
+    portrait: {
+      min: 'min-width: 320px',
+      max: 'max-width: 321px',
+    },
+    landscape: {
+      min: 'min-height: 320px',
+      max: 'max-height: 321px',
+    },
   },
-  phonePortrait: {
-    min: 'min-width: 321px',
-    max: 'max-width: 414px',
-  },
-  phoneLandscape: {
-    min: 'min-width: 415px',
-    max: 'max-width: 667px',
-  },
-  tabletPortrait: {
-    min: 'min-width: 668px',
-    max: 'max-width: 768px',
-  },
-  tabletLandscape: {
-    min: 'min-width: 769px',
-    max: 'max-width: 1024px',
+  tablet: {
+    portrait: {
+      min: 'min-width: 768px',
+      max: 'max-width: 768px',
+    },
+    landscape: {
+      min: 'min-width: 1024px',
+      max: 'max-width: 1024px',
+    },
   },
   desktop: {
-    min: 'min-width: 1025px',
-    max: 'max-width: 1366px',
-  },
-  desktopWide: {
-    min: 'min-width: 1367px',
-    max: 'max-width: 1680px',
-  },
-  desktopHD: {
-    min: 'min-width: 1681px',
-    max: 'max-width: 1920px',
-  },
-  desktopMega: {
-    min: 'min-width: 1921px',
+    min: 'min-width: 1280px',
     max: 'max-width: 2560px',
   },
 };

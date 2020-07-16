@@ -3,9 +3,9 @@ import Layout from '@templates/layout';
 import styled from 'styled-components';
 import { saveState } from '@utils/localStorage';
 import { useSelector } from 'react-redux';
-import Hero from '@organisms/he-hero';
+import TechStack from '@organisms/ts-techstack';
 
-export default function Index() {
+export default function Techstack() {
   const state = useSelector((state) => state);
   useEffect(() => {
     saveState('appState', state);
@@ -13,7 +13,7 @@ export default function Index() {
 
   return (
     <Layout>
-      <Hero />
+      <TechStack />
     </Layout>
   );
 }

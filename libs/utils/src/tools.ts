@@ -56,10 +56,10 @@ export const tools = [
     experience: Experience.ADVANCED,
   },
   {
-    src: 'bulljs.png',
-    href: 'https://optimalbits.github.io/bull/',
-    groups: [ToolType.DATABASE],
-    experience: Experience.PROFICIENT,
+    src: 'travis.png',
+    href: 'https://travis-ci.org/',
+    groups: [ToolType.CICD],
+    experience: Experience.FAMILIAR,
   },
   {
     src: 'jenkins.png',
@@ -145,7 +145,7 @@ export const tools = [
   {
     src: 'jest.png',
     href: 'https://jestjs.io/',
-    groups: [ToolType.BACKEND, ToolType.TOOLS],
+    groups: [ToolType.TOOLS],
     experience: Experience.ADVANCED,
   },
   {
@@ -206,7 +206,7 @@ export const tools = [
     src: 'gitlab.png',
     href: 'https://gitlab.com/',
     groups: [ToolType.CICD, ToolType.TOOLS],
-    experience: Experience.PROFICIENT,
+    experience: Experience.FAMILIAR,
   },
   {
     src: 'eslint.png',
@@ -337,5 +337,41 @@ export const tools = [
     href: 'https://jwt.io/',
     groups: [ToolType.PROTOCOLS],
     experience: Experience.PROFICIENT,
+  },
+  {
+    src: 'bootstrap.png',
+    href: 'https://getbootstrap.com/',
+    groups: [ToolType.FRONTEND],
+    experience: Experience.FAMILIAR,
+  },
+  {
+    src: 'latex.png',
+    href: 'https://www.latex-project.org/',
+    groups: [ToolType.LANGUAGE],
+    experience: Experience.PROFICIENT,
+  },
+  {
+    src: 'robo3t.png',
+    href: 'https://robomongo.org/',
+    groups: [ToolType.TOOLS],
+    experience: Experience.PROFICIENT,
+  },
+  {
+    src: 'npm.png',
+    href: 'https://www.npmjs.com/',
+    groups: [ToolType.TOOLS],
+    experience: Experience.PROFICIENT,
+  },
+  {
+    src: 'babel.png',
+    href: 'https://babeljs.io/',
+    groups: [ToolType.TOOLS],
+    experience: Experience.PROFICIENT,
+  },
+  {
+    src: 'ssh.png',
+    href: 'https://en.wikipedia.org/wiki/Secure_Shell',
+    groups: [ToolType.PROTOCOLS],
+    experience: Experience.ADVANCED,
   },
 ];
