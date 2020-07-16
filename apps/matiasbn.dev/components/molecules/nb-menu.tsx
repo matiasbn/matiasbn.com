@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import NavbarMenuText from '@atoms/nb-menu-text';
 import breakpoints from '@utils/breakpoints';
@@ -10,9 +10,10 @@ import {
   faFileCode,
   faComment,
 } from '@fortawesome/free-regular-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { ActionTypes } from '@store';
 import { MenuOptions } from '@utils/enums';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { NavbarOption } from '@utils/interfaces';
 
 const Wrapper = styled.div<{ clicked?: boolean; elements?: number }>`
   position: absolute;
@@ -29,10 +30,11 @@ const Wrapper = styled.div<{ clicked?: boolean; elements?: number }>`
   @media (${breakpoints.desktop.min}) {
     position: initial;
     display: grid;
-    grid-template-rows: repeat(${(props) => props.elements - 1}, 6vh);
+    grid-template-rows: repeat(${(props) => props.elements - 1}, 10vh);
     gap: 2rem;
     grid-template-columns: 1fr;
     height: 100%;
+    width: 100%;
 
     a:nth-child(4) {
       display: none;
@@ -40,10 +42,10 @@ const Wrapper = styled.div<{ clicked?: boolean; elements?: number }>`
   }
 `;
 
-const options = [
+const options: NavbarOption[] = [
   {
     icon: faUser,
-    title: 'About me',
+    title: 'About',
     route: '/#',
     option: MenuOptions.ABOUT,
     //    route: '/techstack',
@@ -79,6 +81,7 @@ export default function NavbarMenu({}: Props) {
   const router = useRouter();
   const clicked = useSelector((state) => state.navBarClicked);
   const selected = useSelector((state) => state.menuOption);
+  const [hovered, setHovered] = useState('');
 
   const dispatch = useDispatch();
   function handleClick(opt: Options) {
@@ -87,17 +90,28 @@ export default function NavbarMenu({}: Props) {
       type: ActionTypes.SET_MENU_OPTION,
       payload: option === selected ? MenuOptions.NONE : option,
     });
-    //    router.push(route);
+    //    router.push(route)
   }
+
   return (
     <Wrapper clicked={clicked} elements={options.length}>
       {options.map((option) => (
-        <NavbarMenuText key={option.title} onClick={() => handleClick(option)}>
-          {selected === option.option ? (
-            <p>{option.title}</p>
-          ) : (
-            <FontAwesomeIcon icon={option.icon} />
-          )}
+        <NavbarMenuText
+          key={option.title}
+          onClick={() => handleClick(option)}
+          onMouseEnter={() => setHovered(option.option)}
+          onMouseLeave={() => setHovered('')}
+          hover={hovered === option.option}
+        >
+          <p>{option.title}</p>
+          <div>
+            <FontAwesomeIcon
+              icon={option.icon}
+              style={{
+                color: selected === option.option ? '#73f9d9' : 'white',
+              }}
+            />
+          </div>
         </NavbarMenuText>
       ))}
     </Wrapper>

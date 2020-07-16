@@ -10,7 +10,7 @@ const Wrapper = styled.div`
   grid-template-columns: 1fr;
 
   @media (${breakpoints.desktop.min}) {
-    grid-template-columns: 7vw 93vw;
+    grid-template-columns: 5vw 95vw;
     grid-template-rows: 100vh;
   }
 `;
