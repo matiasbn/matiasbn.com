@@ -60,7 +60,7 @@ const options: NavbarOption[] = [
   {
     icon: faKeyboard,
     title: 'Tools',
-    route: '/#',
+    route: '/techstack',
     option: MenuOptions.TECH,
     //    route: '/techstack',
   },
@@ -90,7 +90,7 @@ export default function NavbarMenu({}: Props) {
       type: ActionTypes.SET_MENU_OPTION,
       payload: option === selected ? MenuOptions.NONE : option,
     });
-    //    router.push(route)
+    router.push(route);
   }
 
   return (

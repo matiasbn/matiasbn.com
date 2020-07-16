@@ -8,42 +8,42 @@ import breakpoints from '@utils/breakpoints';
 interface Props extends AllHTMLAttributes<{}> {}
 
 const columnCalculator = (toolsAmount) => {
-  let i = 12;
+  let i = 6;
   while (toolsAmount % i !== 0) i -= 1;
   return i;
 };
+
+const Wrapper = styled.div`
+  background: #282828;
+  border-radius: 1rem;
+  width: 95%;
+`;
 
 const Container = styled.div<{ toolsAmount: number }>`
   background: white;
   display: grid;
   grid-template-columns: repeat(
     ${(props) => columnCalculator(props.toolsAmount)},
-    minmax(25rem, auto)
+    minmax(2rem, auto)
   );
-  grid-auto-rows: 50rem;
+  grid-auto-rows: 3rem;
   justify-items: center;
   align-items: center;
   border-color: #eee9ed;
   border-style: solid;
-  border-radius: 10rem;
-  margin: 10rem;
+  border-radius: 1rem;
+  margin: 1rem;
 
   @media (${breakpoints.desktop.min}) {
     grid-template-columns: repeat(
       ${(props) => columnCalculator(props.toolsAmount)},
       minmax(70rem, auto)
     );
-    grid-auto-rows: 90rem;
+    grid-auto-rows: 9rem;
     border-width: 1rem;
-    padding: 12rem;
-    margin: 20rem;
+    padding: 1rem;
+    margin: 2rem;
   }
-`;
-
-const Wrapper = styled.div`
-  width: 85%;
-  background: #282828;
-  border-radius: 10rem;
 `;
 
 export default function TechStackGallery(props: Props) {
@@ -81,9 +81,9 @@ export default function TechStackGallery(props: Props) {
     <Wrapper>
       <Container toolsAmount={toolsAmount}>
         {selectedTools
-          .sort(function () {
-            return 0.5 - Math.random();
-          })
+          //          .sort(function () {
+          //            return 0.5 - Math.random();
+          //          })
           .map((tool, index) => (
             <a href={tool?.href} key={index}>
               <TechStackIcon src={tool.src} />

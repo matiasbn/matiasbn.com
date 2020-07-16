@@ -11,9 +11,10 @@ const Wrapper = styled.div`
   text-align: center;
   align-items: center;
   justify-items: center;
-  padding: 30rem;
+  padding: 3rem;
   background: #282828;
   width: 100%;
+  height: 100%;
 `;
 
 export default function TechStackIntro(props: Props) {

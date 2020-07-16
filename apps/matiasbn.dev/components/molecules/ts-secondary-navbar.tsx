@@ -8,15 +8,13 @@ import breakpoints from '@utils/breakpoints';
 
 interface Props extends AllHTMLAttributes<{}> {}
 
-const tabWidth = '20rem';
+const tabWidth = '4rem';
 
 const Wrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(4, ${tabWidth});
   justify-items: center;
   align-items: center;
-  width: 80%;
-  height: 100%;
   position: relative;
   @media (${breakpoints.desktop.min}) {
     display: grid;

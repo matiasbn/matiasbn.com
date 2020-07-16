@@ -7,7 +7,7 @@ const Wrapper = styled.div`
   height: 100%;
   display: grid;
   grid-template-rows: 10vh 90vh;
-  grid-template-columns: 1fr;
+  grid-template-columns: 100vw;
 
   @media (${breakpoints.desktop.min}) {
     grid-template-columns: 5vw 95vw;

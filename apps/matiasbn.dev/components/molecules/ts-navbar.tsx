@@ -10,11 +10,9 @@ interface Props extends AllHTMLAttributes<{}> {}
 
 const Wrapper = styled.nav`
   display: grid;
-  grid-template-columns: repeat(10, 8rem);
+  grid-template-columns: repeat(10, fit-content());
   justify-items: center;
   align-items: center;
-  width: 80%;
-  height: 100%;
   position: relative;
   @media (${breakpoints.desktop.min}) {
     display: grid;
